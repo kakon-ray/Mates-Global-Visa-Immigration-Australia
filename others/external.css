@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+.infoMessageError{
+	color: #F00;
+	text-align: center;
+}
+.infoMessage{
+	color: #090;
+	text-align: center;
+}
+.spacebar{
+	float: left;
+	height: 30px;
+	width: 100%;
+}
+.button_continer{
+	height: 50px;
+	width: 295px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.button_continer_single{
+	height: 50px;
+	width: 182px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#maindiv{
+    width:960px; 
+    margin:10px auto; 
+    padding:10px;
+    font-family: 'Droid Sans', sans-serif;
+}
+#formdiv{
+    width:500px; 
+    float:left; 
+    text-align: center;
+}
+
+table.dataTable {
+	font-size: 12px;
+	text-align: center;
+	}
+	
+
+/****Image uploder**************/
+
+input[type="file"] 
+{
+  display: block;
+}
+.imageThumb {
+    max-height: 75px;
+    border: 2px solid;
+    padding: 1px;
+    cursor: pointer;
+}
+        
+
+.pip {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+
+.remove {
+  display: block;
+  background: #444;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.remove:hover {
+   background: white;
+   color: black;
+}
+
+

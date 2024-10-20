@@ -1,0 +1,32 @@
+#page_content{ background: #e3e3e3;}
+.sister_con{ margin-top:30px; padding-left:5px;}
+.fa-pencil-square{ color: green; font-size: 24px;}
+.fa-trash-o{ color: red; font-size: 24px;}
+#edit { font-size: 24px;}
+#delete { font-size: 24px;}
+#add_sister_form{display: none;}
+#common_form{display: none;}
+.menu_list { padding-left: 50px; list-style: none;}
+.m_list { padding-left: 50px; list-style: none;}
+#form_two{ display: none;}
+#form_three{ display: none;}
+
+@media screen and  (min-width: 320px and max-width: 480px) {
+    
+}
+@media screen and  (min-width: 520px) {
+   
+}
+
+
+
+@media screen and  (min-width: 768px) {
+
+}
+
+@media screen and  (min-width: 1024px) {
+  #sale_sideform{ margin-right:; }  
+}
+
+
+
