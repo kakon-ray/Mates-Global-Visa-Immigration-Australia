@@ -80,7 +80,7 @@
     }
 
     .two h1 {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
         letter-spacing: 0;
         line-height: 1.5em;
@@ -236,8 +236,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionNo">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionNo">
+                                            <input class="form-check-input me-3" type="radio" name="occasion" id="occasion_No" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="occasion_No">
                                                 No
                                             </label>
                                             <span class="text-muted"> Go to Question 7</span>
@@ -247,8 +247,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionYes">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionYes">
+                                            <input class="form-check-input me-3" type="radio" name="occasion" id="occasion_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="occasion_Yes">
                                                 Yes
                                             </label>
                                             <span class="text-muted">Give details</span>
@@ -257,6 +257,13 @@
                                 </div>
                             </div>
 
+                        </div>
+
+                        <div class="col-sm-12 mt-2 occasionDIv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details:</label>
+                                <input name="occasionDetails" class="form-control" type="text">
+                            </div>
                         </div>
 
                         <!------------------- Input Field 5 -------------------->
@@ -554,13 +561,22 @@
 
                             <div class="mb-3 p-3 border rounded bg-light">
                                 <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="appliedSubclass103" id="appliedSubclass103_Yes">
+                                    <input class="form-check-input me-3" type="radio" name="appliedSubclass103" id="appliedSubclass103_Yes" checked>
                                     <label class="lebel_title flex-grow-1 fw-semibold" for="appliedSubclass103_Yes">
                                         Yes
                                     </label>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-6 mt-2 appliedSubclass103Div">
+                            <div class="mb-2">
+                                <label class="lebel_title">Please provide your queue date :</label>
+                                <input name="QueueDate" class="form-control" type="date" required>
+                            </div>
+                        </div>
+
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">13. Do you currently hold, or have you applied for, an APEC Business Travel
@@ -587,42 +603,79 @@
                             <div class="mb-2">
                                 <label class="lebel_title">14. Are you a citizen of any other country?</label>
                             </div>
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_No">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_No">
-                                        No
-                                    </label>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_Yes">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_Yes">
-                                        Yes
-                                    </label>
-                                </div>
+
+
+                        </div>
+                        <div class="col-sm-6 mt-2 CitizenOtherCountryDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">List countries :</label>
+                                <input name="CitizenOtherListCountries" class="form-control" type="text" required>
                             </div>
                         </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">15. Do you have other current passports?</label>
                             </div>
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="OtherCurrentPassports" id="CitizenOtherCountry_No">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="OtherCurrentPassports_No">
-                                        No
-                                    </label>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="OtherCurrentPassports" id="OtherCurrentPassports_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="OtherCurrentPassports_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="OtherCurrentPassports" id="OtherCurrentPassports_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="OtherCurrentPassports_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_Yes">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_Yes">
-                                        Yes
-                                    </label>
-                                </div>
+
+
+                        </div>
+
+                        <div class="col-sm-6 mt-2 OtherCurrentPassportsDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Passport number :</label>
+                                <input name="OtherCurrentPassportNumber" class="form-control" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mt-2 OtherCurrentPassportsDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Country of passport :</label>
+                                <input name="OtherCurrentPassportCountry" class="form-control" type="text" required>
                             </div>
                         </div>
 
@@ -645,7 +698,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="HoldIdentityCard" id="HoldIdentityCard_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="HoldIdentityCard" id="HoldIdentityCard_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="HoldIdentityCard_Yes">
                                                 Yes
                                             </label>
@@ -659,34 +712,34 @@
 
                         </div>
 
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-2 HoldIdentityCardDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Family name :</label>
                                 <input name="FamilyName" class="form-control" type="text" required>
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-2 HoldIdentityCardDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Given names :</label>
                                 <input name="GivenNames" class="form-control" type="text" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-2 HoldIdentityCardDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Type of document :</label>
                                 <input name="TypeDocument" class="form-control" type="text" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-2 HoldIdentityCardDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Identity Number :</label>
                                 <input name="IdentityNumber" class="form-control" type="text" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-2 HoldIdentityCardDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Country Issue :</label>
                                 <input name="CountryIssue" class="form-control" type="text" required>
@@ -701,8 +754,6 @@
                         </div>
 
                         <div class="col-sm-12 mt-2">
-
-
                             <div class="row">
                                 <label class="lebel_title">18. What is your legal status in your current location?</label>
                                 <div class="col-sm-3">
@@ -776,14 +827,14 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-sm-12 currentLocationDiv">
                                     <div class="mb-2">
                                         <label class="lebel_title">Give details</label>
                                         <input name="CurrentlyLocated" class="form-control" type="text" required>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6 mt-2">
+                                <div class="col-sm-12 mt-2">
                                     <div class="mb-2">
                                         <label class="lebel_title">19. What is the purpose of your stay in your current location and what is
                                             your visa status? </label>
@@ -850,35 +901,32 @@
                         <div class="two pt-5">
                             <h1>22. &nbsp; Contact telephone numbers</h1>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-4 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Home: </label>
                                 <input name="TelephoneNumberHome" class="form-control" type="phone" required>
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-4 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Office: </label>
                                 <input name="TelephoneNumberOffice" class="form-control" type="phone" required>
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-4 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Mobile/cell: </label>
                                 <input name="MobileCall" class="form-control" type="phone" required>
                             </div>
                         </div>
 
-                        <div class="two pt-5">
-                            <h1>23. &nbsp; Do you agree to the department communicating with you by email and/or fax?</h1>
-                        </div>
-
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-4 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Please Select a Option</label>
+                                <label class="lebel_title">23. Communicating with you by email and/or fax?</label>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6">
+
+                                <div>
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
                                             <input class="form-check-input me-3" type="radio" name="CommunicatingEmail" id="CommunicatingEmail_No">
@@ -887,12 +935,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="CommunicatingEmail" id="CommunicatingEmail_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="CommunicatingEmail" id="CommunicatingEmail_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="CommunicatingEmail_Yes">
                                                 Yes
                                             </label>
@@ -900,18 +946,19 @@
                                     </div>
                                 </div>
 
+
                             </div>
                         </div>
 
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-4 mt-2 CommunicatingEmailDiv">
                             <div class="mb-2">
                                 <label class="lebel_title mb-2">Email address: </label>
                                 <input name="EmailAddress" class="form-control" type="email" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
-                            <div class="mb-2">
+                        <div class="col-sm-4 mt-2 CommunicatingEmailDiv">
+                            <div class="my-2">
                                 <label class="lebel_title">Fax number: </label>
                                 <input name="FaxNumber" class="form-control" type="fax" required>
                             </div>
@@ -946,7 +993,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="AustraliaWithAnyFamilyMember" id="AustraliaWithAnyFamilyMember_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="AustraliaWithAnyFamilyMember" id="AustraliaWithAnyFamilyMember_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaWithAnyFamilyMember_Yes">
                                                 Yes
                                             </label>
@@ -957,21 +1004,21 @@
 
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 AustraliaWithAnyFamilyMemberDIv">
                             <div class="mb-2">
                                 <label class="lebel_title">Full Name: </label>
                                 <input name="FullName" class="form-control" type="fax" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 AustraliaWithAnyFamilyMemberDIv">
                             <div class="mb-2">
                                 <label class="lebel_title">Relationship to You: </label>
                                 <input name="RelationshipYou" class="form-control" type="fax" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 AustraliaWithAnyFamilyMemberDIv">
                             <div class="mb-2">
                                 <label class="lebel_title">Name of sponsor (if applicable): </label>
                                 <input name="NameofSponsor" class="form-control" type="fax" required>
@@ -1006,7 +1053,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="PartnerChildren" id="PartnerChildren_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="PartnerChildren" id="PartnerChildren_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="PartnerChildren_Yes">
                                                 Yes
                                             </label>
@@ -1017,30 +1064,30 @@
 
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 PartnerChildrenDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Full Name: </label>
-                                <input name="PartnerChildrenFullName" class="form-control" type="text" required>
+                                <input name="PartnerChildrenFullName" class="form-control" type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 PartnerChildrenDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Date Of Birth: </label>
-                                <input name="PartnerChildrenRelationshipYou" class="form-control" type="date" required>
+                                <input name="PartnerChildrenRelationshipYou" class="form-control" type="date">
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 PartnerChildrenDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Relationship to You: </label>
-                                <input name="PartnerChildrenRelationshipYou" class="form-control" type="text" required>
+                                <input name="PartnerChildrenRelationshipYou" class="form-control" type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 PartnerChildrenDiv">
                             <div class="mb-2">
                                 <label class="lebel_title">Their address while you are in Australia: </label>
-                                <input name="NameofSponsor" class="form-control" type="text" required>
+                                <input name="NameofSponsor" class="form-control" type="text">
                             </div>
                         </div>
 
@@ -1069,20 +1116,26 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="TravellingAustraliaOtherCountry" id="TravellingAustraliaOtherCountry_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="TravellingAustraliaOtherCountry" id="TravellingAustraliaOtherCountry_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="TravellingAustraliaOtherCountry_Yes">
                                                 Yes
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
 
+                        <div class="col-sm-6 TravellingAustraliaOtherCountryDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">itinerary details: </label>
+                                <input name="ItineraryDetails" class="form-control" type="text" required>
+                            </div>
+                        </div>
 
-                        <div class="col-sm-6">
+
+                        <div class="col-sm-4">
                             <div class="">
                                 <label class="lebel_title">27. Do you have any relatives in Australia?</label>
                             </div>
@@ -1101,7 +1154,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="RelativesAustralia" id="RelativesAustralia_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="RelativesAustralia" id="RelativesAustralia_Yes" checked>
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="RelativesAustralia_Yes">
                                                 Yes
                                             </label>
@@ -1113,33 +1166,33 @@
 
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 RelativesAustralia">
                             <div class="mb-2">
                                 <label class="lebel_title">Full name: </label>
                                 <input name="RelativesAustraliaFullName" class="form-control" type="text" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 RelativesAustralia">
                             <div class="mb-2">
                                 <label class="lebel_title">Date of birth: </label>
                                 <input name="RelativesAustraliaDateBirth" class="form-control" type="date" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 RelativesAustralia">
                             <div class="mb-2">
                                 <label class="lebel_title">Relationship to you: </label>
                                 <input name="RelativesAustraliaRelationship" class="form-control" type="text" required>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 RelativesAustralia">
                             <div class="my-2">
                                 <label class="lebel_title">Address: </label>
                                 <input name="RelativesAustraliaAddress" class="form-control" type="text" required>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 RelativesAustralia">
                             <div class="mt-2">
                                 <label class="lebel_title">Citizen or permanent resident of Australia ?</label>
                             </div>

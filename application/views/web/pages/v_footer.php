@@ -1125,6 +1125,137 @@ foreach ($Contact as $ContactData) {
             }
         });
     });
+
+
+    $(document).ready(function() {
+        $('.occasionDIv').hide();
+        $('input[name="occasion"]').on('change', function() {
+            // If 'Outside Australia' is selected, show the div
+            if ($('#occasion_Yes').is(':checked')) {
+                $('.occasionDIv').show();
+            }
+            // If 'In Australia' is selected, hide the div
+            else if ($('#occasion_No').is(':checked')) {
+                $('.occasionDIv').hide();
+
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('.currentLocationDiv').hide();
+        $('input[name="currentLocation"]').on('change', function() {
+            if ($('#Other').is(':checked')) {
+                $('.currentLocationDiv').show();
+            }
+            else {
+                $('.currentLocationDiv').hide();
+            }
+        });
+    });
+    
+    $(document).ready(function() {
+        $('input[name="appliedSubclass103"]').on('change', function() {
+            if ($('#appliedSubclass103_Yes').is(':checked')) {
+                $('.appliedSubclass103Div').show();
+            }
+            else if($('#appliedSubclass103_No').is(':checked')){
+                $('.appliedSubclass103Div').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('.CitizenOtherCountryDiv').hide();
+        $('input[name="CitizenOtherCountry"]').on('change', function() {
+            if ($('#CitizenOtherCountry_Yes').is(':checked')) {
+                $('.CitizenOtherCountryDiv').show();
+            }
+            else if($('#CitizenOtherCountry_No').is(':checked')){
+                $('.CitizenOtherCountryDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="OtherCurrentPassports"]').on('change', function() {
+            if ($('#OtherCurrentPassports_Yes').is(':checked')) {
+                $('.OtherCurrentPassportsDiv').show();
+            }
+            else if($('#OtherCurrentPassports_No').is(':checked')){
+                $('.OtherCurrentPassportsDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="HoldIdentityCard"]').on('change', function() {
+            if ($('#HoldIdentityCard_Yes').is(':checked')) {
+                $('.HoldIdentityCardDiv').show();
+            }
+            else if($('#HoldIdentityCard_No').is(':checked')){
+                $('.HoldIdentityCardDiv').hide();
+            }
+        });
+    });
+    
+    $(document).ready(function() {
+        $('input[name="CommunicatingEmail"]').on('change', function() {
+            if ($('#CommunicatingEmail_Yes').is(':checked')) {
+                $('.CommunicatingEmailDiv').show();
+            }
+            else if($('#CommunicatingEmail_No').is(':checked')){
+                $('.CommunicatingEmailDiv').hide();
+            }
+        });
+    });
+    
+    $(document).ready(function() {
+        $('input[name="AustraliaWithAnyFamilyMember"]').on('change', function() {
+            if ($('#AustraliaWithAnyFamilyMember_Yes').is(':checked')) {
+                $('.AustraliaWithAnyFamilyMemberDIv').show();
+            }
+            else if($('#AustraliaWithAnyFamilyMember_No').is(':checked')){
+                $('.AustraliaWithAnyFamilyMemberDIv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="PartnerChildren"]').on('change', function() {
+            if ($('#PartnerChildren_Yes').is(':checked')) {
+                $('.PartnerChildrenDiv').show();
+            }
+            else if($('#PartnerChildren_No').is(':checked')){
+                $('.PartnerChildrenDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="TravellingAustraliaOtherCountry"]').on('change', function() {
+            if ($('#TravellingAustraliaOtherCountry_Yes').is(':checked')) {
+                $('.TravellingAustraliaOtherCountryDiv').show();
+            }
+            else if($('#TravellingAustraliaOtherCountry_No').is(':checked')){
+                $('.TravellingAustraliaOtherCountryDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="RelativesAustralia"]').on('change', function() {
+            if ($('#RelativesAustralia_Yes').is(':checked')) {
+                $('.RelativesAustralia').show();
+            }
+            else if($('#RelativesAustralia_No').is(':checked')){
+                $('.RelativesAustralia').hide();
+            }
+        });
+    });
+
+
 </script>
 
 </body>
