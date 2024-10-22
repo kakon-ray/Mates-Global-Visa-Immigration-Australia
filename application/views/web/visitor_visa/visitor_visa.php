@@ -79,6 +79,28 @@
         background-color: #333;
     }
 
+    .two h1 {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 1.5em;
+        padding-bottom: 15px;
+        position: relative;
+    }
+
+
+
+    .two h1:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        height: 1px;
+        width: 100%;
+        max-width: 100%;
+        background-color: #333;
+    }
+
     #user-address-textarea {
         background-color: #fff;
         height: 60px;
@@ -88,56 +110,10 @@
 <section class="team-contact-form">
     <div class="container pb-100">
         <div class="sec-title text-center">
-            <span class="sub-title">Visitor Visa Application Form</span>
+            <span class="sub-title">Visitor Visa Application Form Subclass 400</span>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12">
-
-                <script>
-                    function show_field(str) {
-                        if (str == "") {
-                            document.getElementById("txtHint").innerHTML = "";
-                            return;
-                        }
-                        if (window.XMLHttpRequest) {
-                            // code for IE7+, Firefox, Chrome, Opera, Safari
-                            xmlhttp = new XMLHttpRequest();
-                        } else {
-                            // code for IE6, IE5
-                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange = function() {
-                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-                            }
-                        }
-                        xmlhttp.open("GET", "<?php echo base_url(); ?>web/martial_status?q=" + str, true);
-                        xmlhttp.send();
-                    }
-                </script>
-
-                <script>
-                    function show_field_children(str) {
-                        if (str == "") {
-                            document.getElementById("ChildrenField").innerHTML = "";
-                            return;
-                        }
-                        if (window.XMLHttpRequest) {
-                            // code for IE7+, Firefox, Chrome, Opera, Safari
-                            xmlhttp = new XMLHttpRequest();
-                        } else {
-                            // code for IE6, IE5
-                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange = function() {
-                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                                document.getElementById("ChildrenField").innerHTML = xmlhttp.responseText;
-                            }
-                        }
-                        xmlhttp.open("GET", "<?php echo base_url(); ?>web/children_form?q=" + str, true);
-                        xmlhttp.send();
-                    }
-                </script>
 
                 <!-- Contact Form -->
                 <form id="contact_form" name="contact_form" class="" action="<?php echo base_url(); ?>web_operation/student_assessment_new_submit" method="post">
@@ -147,40 +123,54 @@
                         <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp;General Details :</h1>
                     </div>
                     <div class="row">
-                        <!------------------- Input Field 1 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-12 mt-2">
                             <!-- Question Title -->
                             <div class="mb-2">
-                                <label class="lebel_title">Indicate if you are applying outside Australia or in Australia:</label>
+                                <label class="lebel_title">1. Indicate if you are applying outside Australia or in Australia:</label>
                             </div>
 
-                            <!-- Option 1 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="outsideAustralia">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="outsideAustralia">
-                                        Outside Australia
-                                    </label>
-                                    <span class="text-muted small">Go to Question 2</span>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!-- Option 1 -->
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" checked id="outsideAustralia">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="outsideAustralia">
+                                                Outside Australia
+                                            </label>
+                                            <span class="text-muted small">Go to Question 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+
+                                    <!-- Option 2 -->
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="inAustralia">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="inAustralia">
+                                                In Australia
+                                            </label>
+                                            <span class="text-muted small">Go to Question 5</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Option 2 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="inAustralia">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="inAustralia">
-                                        In Australia
-                                    </label>
-                                    <span class="text-muted small">Go to Question 5</span>
-                                </div>
-                            </div>
+
                         </div>
 
+
+
                         <!------------------- Input Field 2 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="two pt-5 outsideAustraliaDiv">
+                            <h1>Applicants outside Australia</h1>
+                        </div>
+
+                        <div class="col-sm-4 mt-2 outsideAustraliaDiv">
                             <div class="mb-2">
-                                <label class="lebel_title">When do you wish to visit Australia?</label>
+                                <label class="lebel_title">2. When do you wish to visit Australia?</label>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -193,87 +183,98 @@
                         </div>
 
                         <!------------------- Input Field 3 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-8 mt-2 outsideAustraliaDiv">
                             <!-- Question Title -->
                             <div class="mb-2">
-                                <label class="lebel_title">How long do you wish to stay in Australia?</label>
+                                <label class="lebel_title">3. How long do you wish to stay in Australia?</label>
                             </div>
 
-                            <!-- Option 1 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="Upto3months">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="Upto3months">
-                                        Up to 3 months
-                                    </label>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="Upto3months">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Upto3months">
+                                                Up to 3 months
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="Upto6months">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Upto6months">
+                                                Up to 6 months
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="Upto12months">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Upto12months">
+                                                Up to 12 months
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Option 2 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="Upto6months">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="Upto6months">
-                                        Up to 6 months
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- Option 3 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="Upto12months">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="Upto12months">
-                                        Up to 12 months
-                                    </label>
-                                </div>
-                            </div>
 
                         </div>
 
                         <!------------------- Input Field 4 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-12 mt-2 outsideAustraliaDiv">
                             <!-- Question Title -->
                             <div class="mb-2">
-                                <label class="lebel_title"> Do you intend to enter Australia on more than one occasion?</label>
+                                <label class="lebel_title">4. Do you intend to enter Australia on more than one occasion?</label>
                             </div>
 
-                            <!-- Option 1 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionNo">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionNo">
-                                        No
-                                    </label>
-                                    <span class="text-muted"> Go to Question 7</span>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionNo">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionNo">
+                                                No
+                                            </label>
+                                            <span class="text-muted"> Go to Question 7</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <!-- Option 2 -->
-                            <div class="mb-3 p-3 border rounded bg-light">
-                                <div class="form-check d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionYes">
-                                    <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionYes">
-                                        yes
-                                    </label>
-                                    <span class="text-muted">Give details</span>
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="location" id="AustraliaOccasionYes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AustraliaOccasionYes">
+                                                Yes
+                                            </label>
+                                            <span class="text-muted">Give details</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
 
                         <!------------------- Input Field 5 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="two pt-5 insideAustraliaDiv">
+                            <h1>Applicants in Australia</h1>
+                        </div>
+                        <div class="col-sm-4 mt-2 insideAustraliaDiv">
                             <div class="mb-2">
-                                <label class="lebel_title">Specify the date you wish to extend your stay to:</label>
+                                <label class="lebel_title">5. Specify the date you wish to extend your stay to:</label>
                                 <input name="startDate" class="form-control" type="date" required>
                             </div>
                         </div>
 
                         <!------------------- Input Field 5 -------------------->
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-8 mt-2 insideAustraliaDiv">
                             <div class="mb-2">
-                                <label class="lebel_title">Provide detailed reasons for requesting this further stay:</label>
-                                <textarea name="furtherStay" class="form-control" rows="2" cols="2" type="text" required> </textarea>
+                                <label class="lebel_title">6. Provide detailed reasons for requesting this further stay:</label>
+                                <input name="furtherStay" class="form-control" type="text" required>
                             </div>
 
                         </div>
@@ -281,7 +282,11 @@
 
                     <!------------------- Part-A Your details -------------------->
                     <div class="three pt-5">
-                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part A – Your details : (Give the following details exactly as they appear in your passport)</h1>
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details"> &nbsp; Part A – Your details :</h1>
+                    </div>
+
+                    <div class="two pt-5">
+                        <h1>7. Give the following details exactly as they appear in your passport Make sure your passport is valid for the period of stay you are applying for.</h1>
                     </div>
 
                     <div class="row">
@@ -379,8 +384,8 @@
                     </div>
 
                     <!------------------- Part-A Place of birth -------------------->
-                    <div class="three pt-5">
-                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part A – Your details : (Place of birth)</h1>
+                    <div class="two pt-5">
+                        <h1>8.&nbsp; Place of birth</h1>
                     </div>
 
                     <div class="row">
@@ -405,7 +410,7 @@
                         <div class="col-sm-12 mt-2">
                             <!-- Question Title -->
                             <div class="mb-2">
-                                <label class="lebel_title">Relationship status:</label>
+                                <label class="lebel_title">9. Relationship status:</label>
                             </div>
 
                             <!-- Option 1 -->
@@ -448,7 +453,7 @@
                                                 Divorced
                                             </label>
                                         </div>
-                                    </div>
+                                    </div>.
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="mb-3 p-3 border rounded bg-light">
@@ -488,7 +493,7 @@
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Are you or have you been known by any other name?</label>
+                                <label class="lebel_title">10. Are you or have you been known by any other name?</label>
                             </div>
                             <div class="mb-3 p-3 border rounded bg-light">
                                 <div class="form-check d-flex align-items-center">
@@ -511,7 +516,7 @@
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Do you currently hold an Australian visa? </label>
+                                <label class="lebel_title">11. Do you currently hold an Australian visa? </label>
                             </div>
 
                             <div class="mb-3 p-3 border rounded bg-light">
@@ -535,7 +540,7 @@
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Have you applied for a Parent (subclass 103) visa? </label>
+                                <label class="lebel_title">12. Have you applied for a Parent (subclass 103) visa? </label>
                             </div>
 
                             <div class="mb-3 p-3 border rounded bg-light">
@@ -558,7 +563,7 @@
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Do you currently hold, or have you applied for, an APEC Business Travel
+                                <label class="lebel_title">13. Do you currently hold, or have you applied for, an APEC Business Travel
                                     Card (ABTC)?</label>
                             </div>
                             <div class="mb-3 p-3 border rounded bg-light">
@@ -580,7 +585,7 @@
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Are you a citizen of any other country?</label>
+                                <label class="lebel_title">14. Are you a citizen of any other country?</label>
                             </div>
                             <div class="mb-3 p-3 border rounded bg-light">
                                 <div class="form-check d-flex align-items-center">
@@ -601,7 +606,7 @@
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Do you have other current passports?</label>
+                                <label class="lebel_title">15. Do you have other current passports?</label>
                             </div>
                             <div class="mb-3 p-3 border rounded bg-light">
                                 <div class="form-check d-flex align-items-center">
@@ -623,7 +628,7 @@
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Do you hold an identity card or identity number issued to you by your
+                                <label class="lebel_title">16. Do you hold an identity card or identity number issued to you by your
                                     government?</label>
                             </div>
                             <div class="row">
@@ -690,19 +695,16 @@
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">In what country are you currently located? </label>
+                                <label class="lebel_title">17. In what country are you currently located? </label>
                                 <input name="CurrentlyLocated" class="form-control" type="text" required>
                             </div>
                         </div>
 
                         <div class="col-sm-12 mt-2">
-                            <!-- Question Title -->
-                            <div class="mb-2">
-                                <label class="lebel_title">What is your legal status in your current location?:</label>
-                            </div>
 
-                            <!-- Option 1 -->
+
                             <div class="row">
+                                <label class="lebel_title">18. What is your legal status in your current location?</label>
                                 <div class="col-sm-3">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
@@ -773,66 +775,90 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-sm-6">
+                                    <div class="mb-2">
+                                        <label class="lebel_title">Give details</label>
+                                        <input name="CurrentlyLocated" class="form-control" type="text" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mt-2">
+                                    <div class="mb-2">
+                                        <label class="lebel_title">19. What is the purpose of your stay in your current location and what is
+                                            your visa status? </label>
+                                        <input name="VisaStatus" class="form-control" type="text" required>
+                                    </div>
+                                </div>
                             </div>
 
+                            <!-- Other -->
+
+
+                        </div>
+
+
+
+                        <div class="two pt-5">
+                            <h1>20. Your current residential address?</h1>
                         </div>
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">What is the purpose of your stay in your current location and what is
-                                    your visa status? </label>
-                                <input name="VisaStatus" class="form-control" type="text" required>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 mt-2">
-                            <div class="mb-2">
-                                <label class="lebel_title">What is the purpose of your stay in your current location and what is
-                                    your visa status? </label>
-                                <input name="VisaStatus" class="form-control" type="text" required>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 mt-2">
-                            <div class="mb-2">
-                                <label class="lebel_title">Your current residential address? </label>
+                                <label class="lebel_title">Address:</label>
                                 <input name="ResidentialAddress" class="form-control" type="text" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Your current residential Post Code: </label>
-                                <input name="PostCode" class="form-control" type="text" required>
+                                <label class="lebel_title">Post Code: </label>
+                                <input name="ResidentialPostCode" class="form-control" type="text" required>
                             </div>
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Your current residential Country: </label>
+                                <label class="lebel_title">Country: </label>
                                 <input name="ResidentialCounty" class="form-control" type="text" required>
                             </div>
                         </div>
+
+                        <div class="two pt-5">
+                            <h1>21. Address for correspondence: </h1>
+                        </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Address for correspondence: </label>
+                                <label class="lebel_title">Correspondence Address: </label>
                                 <input name="AddressCorrespondence" class="form-control" type="text" required>
                             </div>
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Address for correspondence Postal Code: </label>
+                                <label class="lebel_title">Postal Code: </label>
                                 <input name="CorrespondencePostalCode" class="form-control" type="text" required>
                             </div>
                         </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Contact telephone numbers Home: </label>
+                                <label class="lebel_title">Country: </label>
+                                <input name="CorrespondenceCountry" class="form-control" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="two pt-5">
+                            <h1>22. &nbsp; Contact telephone numbers</h1>
+                        </div>
+                        <div class="col-sm-6 mt-2">
+                            <div class="mb-2">
+                                <label class="lebel_title">Home: </label>
                                 <input name="TelephoneNumberHome" class="form-control" type="phone" required>
                             </div>
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Contact telephone numbers Office: </label>
+                                <label class="lebel_title">Office: </label>
                                 <input name="TelephoneNumberOffice" class="form-control" type="phone" required>
                             </div>
                         </div>
@@ -843,10 +869,13 @@
                             </div>
                         </div>
 
+                        <div class="two pt-5">
+                            <h1>23. &nbsp; Do you agree to the department communicating with you by email and/or fax?</h1>
+                        </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
-                                <label class="lebel_title">Do you agree to the department communicating with you by email
-                                    and/or fax?</label>
+                                <label class="lebel_title">Please Select a Option</label>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -900,7 +929,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="">
-                                <label class="lebel_title">Are you travelling to, or are you currently in, Australia with any family members?</label>
+                                <label class="lebel_title">24. Are you travelling to, or are you currently in, Australia with any family members?</label>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -960,7 +989,7 @@
                     <div class="row">
                         <div class="col-sm-8">
                             <div class="">
-                                <label class="lebel_title">Do you have a partner, any children, or fiancé who will NOT be travelling, or has NOT travelled, to Australia with you?</label>
+                                <label class="lebel_title">25. Do you have a partner, any children, or fiancé who will NOT be travelling, or has NOT travelled, to Australia with you?</label>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -1015,6 +1044,164 @@
                             </div>
                         </div>
 
+
+                        <!------------------- Part-C Place of birth -------------------->
+                        <div class="three pt-5">
+                            <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part D – Details of your visit to Australia </h1>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label class="lebel_title">26. Is it likely you will be travelling from Australia to any other country?</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="TravellingAustraliaOtherCountry" id="TravellingAustraliaOtherCountry_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="TravellingAustraliaOtherCountry_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="TravellingAustraliaOtherCountry" id="TravellingAustraliaOtherCountry_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="TravellingAustraliaOtherCountry_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label class="lebel_title">27. Do you have any relatives in Australia?</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="RelativesAustralia" id="RelativesAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="RelativesAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="RelativesAustralia" id="RelativesAustralia_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="RelativesAustralia_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">Full name: </label>
+                                <input name="RelativesAustraliaFullName" class="form-control" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date of birth: </label>
+                                <input name="RelativesAustraliaDateBirth" class="form-control" type="date" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">Relationship to you: </label>
+                                <input name="RelativesAustraliaRelationship" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="my-2">
+                                <label class="lebel_title">Address: </label>
+                                <input name="RelativesAustraliaAddress" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mt-2">
+                                <label class="lebel_title">Citizen or permanent resident of Australia ?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mt-2">
+                                <label class="lebel_title">28. Do you have any friends or contacts in Australia?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="FriendsContactsAustralia" id="FriendsContactsAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="FriendsContactsAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
 
@@ -1026,6 +1213,7 @@
             </div>
         </div>
     </div>
+
 </section>
 <!--Contact Details End-->
 

@@ -1108,6 +1108,25 @@ foreach ($Contact as $ContactData) {
 
 
 
+<!-- ==================================== visitor visa Application Form Start ======================= -->
+<script>
+    $(document).ready(function() {
+        $('.insideAustraliaDiv').hide();
+        $('input[name="location"]').on('change', function() {
+            // If 'Outside Australia' is selected, show the div
+            if ($('#outsideAustralia').is(':checked')) {
+                $('.outsideAustraliaDiv').show();
+                $('.insideAustraliaDiv').hide();
+            }
+            // If 'In Australia' is selected, hide the div
+            else if ($('#inAustralia').is(':checked')) {
+                $('.outsideAustraliaDiv').hide();
+                $('.insideAustraliaDiv').show();
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>
