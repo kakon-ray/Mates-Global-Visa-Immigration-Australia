@@ -106,6 +106,10 @@
         height: 60px;
         margin-bottom: 10px;
     }
+
+    .lebel_title {
+        line-height: 13px;
+    }
 </style>
 <section class="team-contact-form">
     <div class="container pb-100">
@@ -604,24 +608,21 @@
                                 <label class="lebel_title">14. Are you a citizen of any other country?</label>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3 p-3 border rounded bg-light">
-                                        <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_No">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_No">
-                                                No
-                                            </label>
-                                        </div>
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_No">
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_No">
+                                            No
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="mb-3 p-3 border rounded bg-light">
-                                        <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_Yes" checked>
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_Yes">
-                                                Yes
-                                            </label>
-                                        </div>
+
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="CitizenOtherCountry" id="CitizenOtherCountry_Yes" checked>
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="CitizenOtherCountry_Yes">
+                                            Yes
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -680,7 +681,7 @@
                         </div>
 
                         <div class="col-sm-6 mt-2">
-                            <div class="mb-2">
+                            <div>
                                 <label class="lebel_title">16. Do you hold an identity card or identity number issued to you by your
                                     government?</label>
                             </div>
@@ -753,6 +754,11 @@
                             </div>
                         </div>
 
+                    </div>
+
+                    <!-- start 18 number section -->
+
+                    <div class="row">
                         <div class="col-sm-12 mt-2">
                             <div class="row">
                                 <label class="lebel_title">18. What is your legal status in your current location?</label>
@@ -834,22 +840,22 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12 mt-2">
-                                    <div class="mb-2">
-                                        <label class="lebel_title">19. What is the purpose of your stay in your current location and what is
-                                            your visa status? </label>
-                                        <input name="VisaStatus" class="form-control" type="text" required>
-                                    </div>
-                                </div>
                             </div>
-
-                            <!-- Other -->
-
-
                         </div>
+                    </div>
 
+                    <!-- start 19 number section -->
+                    <div class="col-sm-12 mt-2">
+                        <div class="mb-2">
+                            <label class="lebel_title">19. What is the purpose of your stay in your current location and what is
+                                your visa status? </label>
+                            <input name="VisaStatus" class="form-control" type="text" required>
+                        </div>
+                    </div>
 
+                    <!-- start 20 number section -->
 
+                    <div class="row">
                         <div class="two pt-5">
                             <h1>20. Your current residential address?</h1>
                         </div>
@@ -873,7 +879,11 @@
                                 <input name="ResidentialCounty" class="form-control" type="text" required>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- start 21 number section -->
+
+                    <div class="row">
                         <div class="two pt-5">
                             <h1>21. Address for correspondence: </h1>
                         </div>
@@ -897,7 +907,10 @@
                                 <input name="CorrespondenceCountry" class="form-control" type="text" required>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- start 22 number section -->
+                    <div class="row">
                         <div class="two pt-5">
                             <h1>22. &nbsp; Contact telephone numbers</h1>
                         </div>
@@ -919,7 +932,10 @@
                                 <input name="MobileCall" class="form-control" type="phone" required>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- Start 23  Number Section -->
+                    <div class="row">
                         <div class="col-sm-4 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">23. Communicating with you by email and/or fax?</label>
@@ -963,16 +979,13 @@
                                 <input name="FaxNumber" class="form-control" type="fax" required>
                             </div>
                         </div>
-
-
-
                     </div>
 
                     <!------------------- Part-B Place of birth -------------------->
                     <div class="three pt-5">
                         <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part B – Family travelling to Australia with you</h1>
                     </div>
-
+                    <!-- Start 24 Number Section -->
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="">
@@ -1032,7 +1045,7 @@
                     <div class="three pt-5">
                         <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part C – Family NOT travelling to Australia with you </h1>
                     </div>
-
+                    <!-- Start 25 Number Section -->
                     <div class="row">
                         <div class="col-sm-8">
                             <div class="">
@@ -1090,13 +1103,16 @@
                                 <input name="NameofSponsor" class="form-control" type="text">
                             </div>
                         </div>
+                    </div>
+
+                    <!------------------- Part-D Place of birth -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part D – Details of your visit to Australia </h1>
+                    </div>
 
 
-                        <!------------------- Part-C Place of birth -------------------->
-                        <div class="three pt-5">
-                            <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part D – Details of your visit to Australia </h1>
-                        </div>
-
+                    <!-- Start 26 Number Section -->
+                    <div class="row">
                         <div class="col-sm-6">
                             <div class="">
                                 <label class="lebel_title">26. Is it likely you will be travelling from Australia to any other country?</label>
@@ -1133,8 +1149,11 @@
                                 <input name="ItineraryDetails" class="form-control" type="text" required>
                             </div>
                         </div>
+                    </div>
 
 
+                    <!-- Start 27 Number Section -->
+                    <div class="row">
                         <div class="col-sm-4">
                             <div class="">
                                 <label class="lebel_title">27. Do you have any relatives in Australia?</label>
@@ -1179,7 +1198,6 @@
                                 <input name="RelativesAustraliaDateBirth" class="form-control" type="date" required>
                             </div>
                         </div>
-
                         <div class="col-sm-4 RelativesAustralia">
                             <div class="mb-2">
                                 <label class="lebel_title">Relationship to you: </label>
@@ -1192,17 +1210,19 @@
                                 <input name="RelativesAustraliaAddress" class="form-control" type="text" required>
                             </div>
                         </div>
+           
+
                         <div class="col-sm-4 RelativesAustralia">
-                            <div class="mt-2">
-                                <label class="lebel_title">Citizen or permanent resident of Australia ?</label>
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> Citizen or permanent resident of Australia ?</label>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_No">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_No">
+                                            <input class="form-check-input me-3" type="radio" name="PermanentCitizen" id="PermanentCitizen_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PermanentCitizen_No">
                                                 No
                                             </label>
                                         </div>
@@ -1212,8 +1232,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_Yes">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="PermanentCitizen" id="PermanentCitizen_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PermanentCitizen_Yes">
                                                 Yes
                                             </label>
                                         </div>
@@ -1221,8 +1241,11 @@
                                 </div>
 
                             </div>
-
                         </div>
+                    </div>
+
+                    <!-- Start 28 Number Section -->
+                    <div class="row">
                         <div class="col-sm-4">
                             <div class="mt-2">
                                 <label class="lebel_title">28. Do you have any friends or contacts in Australia?</label>
@@ -1232,8 +1255,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="FriendsContactsAustralia" id="FriendsContactsAustralia_No">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="FriendsContactsAustralia_No">
+                                            <input class="form-check-input me-3" type="radio" name="ContactsAustralia" id="ContactsAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ContactsAustralia_No">
                                                 No
                                             </label>
                                         </div>
@@ -1243,8 +1266,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="Citizen_Yes">
-                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Citizen_Yes">
+                                            <input class="form-check-input me-3" type="radio" name="ContactsAustralia" id="ContactsAustralia_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ContactsAustralia_Yes">
                                                 Yes
                                             </label>
                                         </div>
@@ -1255,7 +1278,1057 @@
 
                         </div>
 
+                        <div class="col-sm-4 ContactsAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Full name: </label>
+                                <input name="ContactsAustraliaFullName" class="form-control" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 ContactsAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date of birth: </label>
+                                <input name="ContactsAustraliaDateBirth" class="form-control" type="date" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ContactsAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Relationship to you: </label>
+                                <input name="ContactsAustraliaRelationship" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ContactsAustraliaDiv">
+                            <div class="my-2">
+                                <label class="lebel_title">Address: </label>
+                                <input name="ContactsAustraliaAddress" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 ContactsAustraliaDiv">
+                            <div class="mt-2">
+                                <label class="lebel_title">Citizen or permanent resident of Australia ?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ContactsAustraliaCitizen" id="ContactsAustraliaCitizen_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ContactsAustraliaCitizen_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Citizen" id="ContactsAustraliaCitizen_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ContactsAustraliaCitizen_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
+
+                    <!-- Start 29 Number Section -->
+                    <div class="row">
+                        <div class="col-sm-12 TravellingAustraliaOtherCountryDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">29. Why do you want to visit Australia? </label>
+                                <input name="VisitAustralia" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start 30 Number Section -->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="mt-2">
+                                <label class="lebel_title">30. Do you intend to do a course of study while in Australia?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CourseStudyAustralia" id="CourseStudyAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CourseStudyAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CourseStudyAustralia" id="CourseStudyAustralia_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CourseStudyAustralia_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 CourseStudyAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Name of the course: </label>
+                                <input name="NameOfTheCourse" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 CourseStudyAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Name of the institution: </label>
+                                <input name="NameOfTheInstitution" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 CourseStudyAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">How long will the course last?: </label>
+                                <input name="CourseDuration" class="form-control" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------- Part-E Place of birth -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part E – Health details </h1>
+                    </div>
+
+                    <!-- start 31 section -->
+                    <div class="row">
+
+                        <p>In the last 5 years, have you visited or lived outside your country of
+                            passport for more than 3 consecutive months?</p>
+
+                        <div class="col-sm-4">
+                            <div>
+                                <label class="lebel_title">31. Do not include time spent in Australia.</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="SpentTimeAustralia" id="SpentTimeAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="SpentTimeAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="SpentTimeAustralia" id="SpentTimeAustralia_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="SpentTimeAustralia_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- country 1 -->
+                        <div class="col-sm-4 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Country(1): </label>
+                                <input name="SpentTimeAustraliaCountry_1" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date: </label>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_1_Date_start" class="form-control" type="date">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_1_Date_end" class="form-control" type="date">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- country 2 -->
+                        <div class="col-sm-6 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Country(2): </label>
+                                <input name="SpentTimeAustraliaCountry_2" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date: </label>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_2_Date_start" class="form-control" type="date">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_2_Date_end" class="form-control" type="date">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- country 2 -->
+                        <div class="col-sm-6 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Country(3): </label>
+                                <input name="SpentTimeAustraliaCountry_3" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 SpentTimeAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date: </label>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_3_Date_start" class="form-control" type="date">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input name="SpentTimeAustraliaCountry_3_Date_end" class="form-control" type="date">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start 32 number section -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title">32. Do you intend to enter a hospital or health care facility ?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="HealthCareFacility" id="HealthCareFacility_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="HealthCareFacility_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="HealthCareFacility" id="HealthCareFacility_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="HealthCareFacility_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 HealthCareFacilityDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="HealthCareFacilityDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start 33 number section -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title">33. Do you intend to work as, a doctor, dentist, nurse or
+                                    paramedic during your stay in Australia?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="DoctorDentist" id="DoctorDentist_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="DoctorDentist_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="DoctorDentist" id="DoctorDentist_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="DoctorDentist_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 DoctorDentistDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="DoctorDentistDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start 34 number section -->
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">34. Ever had, or currently have, tuberculosis / ever had a chest x-ray which showed an abnormality?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Tuberculosis" id="Tuberculosis_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Tuberculosis_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="Tuberculosis" id="Tuberculosis_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="Tuberculosis_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 TuberculosisDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="TuberculosisDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start 35 Number Section -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">35. During your proposed visit to Australia, do you expect to incur medical
+                                    costs, or require treatment or medical follow up for: blood disorder/cancer/heart disease/HIV Infection;</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="IncurMedicalCosts" id="IncurMedicalCosts_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="IncurMedicalCosts_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="IncurMedicalCosts" id="IncurMedicalCosts_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="IncurMedicalCosts_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 IncurMedicalCostsDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="IncurMedicalCostsDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start 36 Number Section -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">36. Do you require assistance with mobility or care due to a medical
+                                    condition?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="MedicalCondition" id="MedicalCondition_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="MedicalCondition_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="MedicalCondition" id="MedicalCondition_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="MedicalCondition_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 MedicalConditionDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="MedicalConditionDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Start 37 Number Section -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">37. Have you undertaken a health examination for an Australian visa in
+                                    the last 12 months?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="UndertakenAustralianVisaLast12Month" id="UndertakenAustralianVisaLast12Month_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="UndertakenAustralianVisaLast12Month_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="UndertakenAustralianVisaLast12Month" id="UndertakenAustralianVisaLast12Month_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="UndertakenAustralianVisaLast12Month_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 UndertakenAustralianVisaLast12MonthDIv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details: </label>
+                                <input name="MedicalConditionDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------- Part-F Place of birth -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part F – Character details </h1>
+                    </div>
+
+                    <p>Have you ever:</p>
+
+                    <div class="row">
+
+                        <!-- question 1 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been charged with any offence that is
+                                    currently awaiting legal action?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails1" id="CharacterDetails1_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails1_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails1" id="CharacterDetails1_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails1_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 2 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been convicted of an offence in any country
+                                    (including any conviction which is now removed from official records)?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails2" id="CharacterDetails2_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails2_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails2" id="CharacterDetails2_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails2_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 3 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been the subject of an arrest warrant or
+                                    Interpol notice?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails3" id="CharacterDetails3_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails3_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails3" id="CharacterDetails3_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails3_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- question 4 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been found guilty of a sexually based offence involving a child (including where no
+                                    conviction as recorded)?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails4" id="CharacterDetails4_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails4_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails4" id="CharacterDetails4_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails4_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 5 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been named on a sex offender register?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails5" id="CharacterDetails5_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails5_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails5" id="CharacterDetails5_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails5_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- question 6 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been acquitted of any offence on the grounds
+                                    of unsoundness of mind or insanity?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails6" id="CharacterDetails6_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails6_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails6" id="CharacterDetails6_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails6_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 7 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been found by a court not fit to plead?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails7" id="CharacterDetails7_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails7_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails7" id="CharacterDetails7_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails7_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 8 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">been directly or indirectly involved in, or
+                                    associated with, activities which would represent a risk to national security in Australia or any other country?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails8" id="CharacterDetails8_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails8_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails8" id="CharacterDetails8_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails8_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 9 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">Been charged with, or indicted for: genocide,
+                                    war crimes, crimes against humanity, torture, slavery, or any other crime that is otherwise of a serious international concern?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails9" id="CharacterDetails9_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails9_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails9" id="CharacterDetails9_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails9_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 10 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> been associated with a person, group or organisation that has been/is involved in criminal conduct?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails10" id="CharacterDetails10_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails10_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails10" id="CharacterDetails10_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails10_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 11 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> been associated with an organisation
+                                    engaged in violence or engaged in acts of violence (including war, insurgency, freedom fighting, terrorism, protest) either overseas or in Australia?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails11" id="CharacterDetails11_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails11_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails11" id="CharacterDetails11_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails11_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 12 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> served in a military force, police force, state
+                                    sponsored/private militia or intelligence agency (including secret police)?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails12" id="CharacterDetails12_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails12_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails12" id="CharacterDetails12_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails12_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 13 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">undergone any military/paramilitary training,
+                                    been trained in weapons/explosives or in the manufacture of chemical/biological products?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails13" id="CharacterDetails13_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails13_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails13" id="CharacterDetails13_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails13_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 14 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> Been involved in people smuggling or people trafficking offences?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails14" id="CharacterDetails14_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails14_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails14" id="CharacterDetails14_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails14_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- question 15 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> been removed, deported or excluded from any country (including Australia)?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails15" id="CharacterDetails15_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails15_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails15" id="CharacterDetails15_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails15_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 16 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;"> Overstayed a visa in any country (including
+                                    Australia)?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails16" id="CharacterDetails16_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails16_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails16" id="CharacterDetails16_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails16_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- question 17 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">Had any outstanding debts to the Australian
+                                    Government or any public authority in Australia?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails17" id="CharacterDetails17_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails17_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="CharacterDetails17" id="CharacterDetails17_Yes">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="CharacterDetails17_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <div class="mt-5 text-center">

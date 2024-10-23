@@ -1255,6 +1255,110 @@ foreach ($Contact as $ContactData) {
         });
     });
 
+    $(document).ready(function() {
+        $('input[name="ContactsAustralia"]').on('change', function() {
+            if ($('#ContactsAustralia_Yes').is(':checked')) {
+                $('.ContactsAustraliaDiv').show();
+            }
+            else if($('#ContactsAustralia_No').is(':checked')){
+                $('.ContactsAustraliaDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="CourseStudyAustralia"]').on('change', function() {
+            if ($('#CourseStudyAustralia_Yes').is(':checked')) {
+                $('.CourseStudyAustraliaDiv').show();
+            }
+            else if($('#CourseStudyAustralia_No').is(':checked')){
+                $('.CourseStudyAustraliaDiv').hide();
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('input[name="SpentTimeAustralia"]').on('change', function() {
+            if ($('#SpentTimeAustralia_Yes').is(':checked')) {
+                $('.SpentTimeAustraliaDiv').show();
+            }
+            else if($('#SpentTimeAustralia_No').is(':checked')){
+                $('.SpentTimeAustraliaDiv').hide();
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('input[name="HealthCareFacility"]').on('change', function() {
+            if ($('#HealthCareFacility_Yes').is(':checked')) {
+                $('.HealthCareFacilityDiv').show();
+            }
+            else if($('#HealthCareFacility_No').is(':checked')){
+                $('.HealthCareFacilityDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="DoctorDentist"]').on('change', function() {
+            if ($('#DoctorDentist_Yes').is(':checked')) {
+                $('.DoctorDentistDiv').show();
+            }
+            else if($('#DoctorDentist_No').is(':checked')){
+                $('.DoctorDentistDiv').hide();
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('input[name="Tuberculosis"]').on('change', function() {
+            if ($('#Tuberculosis_Yes').is(':checked')) {
+                $('.TuberculosisDiv').show();
+            }
+            else if($('#Tuberculosis_No').is(':checked')){
+                $('.TuberculosisDiv').hide();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('input[name="IncurMedicalCosts"]').on('change', function() {
+            if ($('#IncurMedicalCosts_Yes').is(':checked')) {
+                $('.IncurMedicalCostsDiv').show();
+            }
+            else if($('#IncurMedicalCosts_No').is(':checked')){
+                $('.IncurMedicalCostsDiv').hide();
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('input[name="MedicalCondition"]').on('change', function() {
+            if ($('#MedicalCondition_Yes').is(':checked')) {
+                $('.MedicalConditionDiv').show();
+            }
+            else if($('#MedicalCondition_No').is(':checked')){
+                $('.MedicalConditionDiv').hide();
+            }
+        });
+    });
+
+    
+    $(document).ready(function() {
+        $('input[name="UndertakenAustralianVisaLast12Month"]').on('change', function() {
+            if ($('#UndertakenAustralianVisaLast12Month_Yes').is(':checked')) {
+                $('.UndertakenAustralianVisaLast12MonthDIv').show();
+            }
+            else if($('#UndertakenAustralianVisaLast12Month_No').is(':checked')){
+                $('.UndertakenAustralianVisaLast12MonthDIv').hide();
+            }
+        });
+    });
+
 
 </script>
 
