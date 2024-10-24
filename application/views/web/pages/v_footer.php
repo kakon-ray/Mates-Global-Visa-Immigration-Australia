@@ -1347,7 +1347,7 @@ foreach ($Contact as $ContactData) {
         $('.EmploymentStatus_Other_Div').hide();
         $('.EmploymentStatus_Student_Div').hide();
         $('.EmploymentStatus_Retired_Div').hide();
-        $('.EmploymentStatus_Employed_Div').hide();
+
 
         $('input[name="EmploymentStatus"]').on('change', function() {
             if ($('#EmploymentStatus_Employed').is(':checked')) {
@@ -1385,7 +1385,31 @@ foreach ($Contact as $ContactData) {
     });
 
 
+    // Question 41
 
+    $(document).ready(function() {
+        $('input[name="ProvidingSupportVisitAustralia"]').on('change', function() {
+            if ($('#ProvidingSupportVisitAustralia_Yes').is(':checked')) {
+                $('.ProvidingSupportVisitAustraliaDiv').show();
+            } else if ($('#ProvidingSupportVisitAustralia_No').is(':checked')) {
+                $('.ProvidingSupportVisitAustraliaDiv').hide();
+            }
+        });
+    });
+
+
+
+    // Question 42
+
+    $(document).ready(function() {
+        $('input[name="PreviousApplications"]').on('change', function() {
+            if ($('#PreviousApplications_Yes').is(':checked')) {
+                $('.PreviousApplicationsDiv').show();
+            } else if ($('#PreviousApplications_No').is(':checked')) {
+                $('.PreviousApplicationsDiv').hide();
+            }
+        });
+    });
 
 </script>
 

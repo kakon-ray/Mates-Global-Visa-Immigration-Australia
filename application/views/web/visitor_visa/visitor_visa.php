@@ -2355,7 +2355,7 @@
                                 <div class="col-lg-2">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Retired" checked>
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Retired">
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Retired">
                                                 Retired
                                             </label>
@@ -2365,7 +2365,7 @@
                                 <div class="col-lg-2">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Student" checked>
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Student">
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Student">
                                                 Student
                                             </label>
@@ -2375,7 +2375,7 @@
                                 <div class="col-lg-2">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Other" checked>
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Other">
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Other">
                                                 Other
                                             </label>
@@ -2385,7 +2385,7 @@
                                 <div class="col-lg-3">
                                     <div class="mb-3 p-3 border rounded bg-light">
                                         <div class="form-check d-flex align-items-center">
-                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Unemployed" checked>
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Unemployed">
                                             <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Unemployed">
                                                 Unemployed
                                             </label>
@@ -2492,21 +2492,177 @@
                     </div>
 
 
-                    <!------------------- Part-F Place of birth -------------------->
+                    <!------------------- Part H – Funding for stay -------------------->
                     <div class="three pt-5">
                         <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part H – Funding for stay </h1>
                     </div>
 
 
                     <div class="row">
-                        <div class="col-sm-12">
+                        <!-- Question 40 -->
+                        <div class="col-sm-6">
                             <div class="mb-2">
-                                <label class="lebel_title">Give details of how you will maintain yourself financially while you are
-                                in Australia: </label>
+                                <label class="lebel_title">40. Give details of how you will maintain yourself financially while you are
+                                    in Australia: </label>
                                 <input name="Maintain_Yourself_Financially" class="form-control" type="text">
                             </div>
                         </div>
+
+                        <!-- Question 41 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">41. Is your sponsor or someone else providing support for your visit to Australia?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ProvidingSupportVisitAustralia" id="ProvidingSupportVisitAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ProvidingSupportVisitAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ProvidingSupportVisitAustralia" id="ProvidingSupportVisitAustralia_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ProvidingSupportVisitAustralia_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 ProvidingSupportVisitAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Full Name : </label>
+                                <input name="ProvidingSupportVisitAustralia_Full_Name" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 ProvidingSupportVisitAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Date of birth : </label>
+                                <input name="ProvidingSupportVisitAustralia_DateofBirth" class="form-control" type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4 ProvidingSupportVisitAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Relationship to You : </label>
+                                <input name="ProvidingSupportVisitAustralia_Relationship_you" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 ProvidingSupportVisitAustraliaDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Their address while you are in Australia : </label>
+                                <input name="ProvidingSupportVisitAustralia_Address_While_Australia" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 ProvidingSupportVisitAustraliaDiv">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">Type of support provided </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="TypeSupportProvided" id="TypeSupportProvidedFinancial">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="TypeSupportProvidedFinancial">
+                                                Financial
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="TypeSupportProvided" id="TypeSupportProvided_Accommodation">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="TypeSupportProvided_Accommodation">
+                                                Accommodation
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="TypeSupportProvided" id="TypeSupportProvided_Other">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="TypeSupportProvided_Other">
+                                                Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!------------------- Part I – Previous applications -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part I – Previous applications </h1>
+                    </div>
+
+                    <!-- Question 42  -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">42. Ibeen in Australia and not complied with
+                                    visa conditions or departed Australia outside your authorised period of stay?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PreviousApplications" id="PreviousApplications_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PreviousApplications_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PreviousApplications" id="PreviousApplications_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PreviousApplications_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 PreviousApplicationsDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">If you answered ‘Yes’ to any of the above questions, give details : </label>
+                                <input name="PreviousApplicationsDetails" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <div class="mt-5 text-center">
