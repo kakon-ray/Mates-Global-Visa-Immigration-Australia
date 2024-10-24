@@ -1148,19 +1148,17 @@ foreach ($Contact as $ContactData) {
         $('input[name="currentLocation"]').on('change', function() {
             if ($('#Other').is(':checked')) {
                 $('.currentLocationDiv').show();
-            }
-            else {
+            } else {
                 $('.currentLocationDiv').hide();
             }
         });
     });
-    
+
     $(document).ready(function() {
         $('input[name="appliedSubclass103"]').on('change', function() {
             if ($('#appliedSubclass103_Yes').is(':checked')) {
                 $('.appliedSubclass103Div').show();
-            }
-            else if($('#appliedSubclass103_No').is(':checked')){
+            } else if ($('#appliedSubclass103_No').is(':checked')) {
                 $('.appliedSubclass103Div').hide();
             }
         });
@@ -1171,8 +1169,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="CitizenOtherCountry"]').on('change', function() {
             if ($('#CitizenOtherCountry_Yes').is(':checked')) {
                 $('.CitizenOtherCountryDiv').show();
-            }
-            else if($('#CitizenOtherCountry_No').is(':checked')){
+            } else if ($('#CitizenOtherCountry_No').is(':checked')) {
                 $('.CitizenOtherCountryDiv').hide();
             }
         });
@@ -1182,8 +1179,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="OtherCurrentPassports"]').on('change', function() {
             if ($('#OtherCurrentPassports_Yes').is(':checked')) {
                 $('.OtherCurrentPassportsDiv').show();
-            }
-            else if($('#OtherCurrentPassports_No').is(':checked')){
+            } else if ($('#OtherCurrentPassports_No').is(':checked')) {
                 $('.OtherCurrentPassportsDiv').hide();
             }
         });
@@ -1193,30 +1189,27 @@ foreach ($Contact as $ContactData) {
         $('input[name="HoldIdentityCard"]').on('change', function() {
             if ($('#HoldIdentityCard_Yes').is(':checked')) {
                 $('.HoldIdentityCardDiv').show();
-            }
-            else if($('#HoldIdentityCard_No').is(':checked')){
+            } else if ($('#HoldIdentityCard_No').is(':checked')) {
                 $('.HoldIdentityCardDiv').hide();
             }
         });
     });
-    
+
     $(document).ready(function() {
         $('input[name="CommunicatingEmail"]').on('change', function() {
             if ($('#CommunicatingEmail_Yes').is(':checked')) {
                 $('.CommunicatingEmailDiv').show();
-            }
-            else if($('#CommunicatingEmail_No').is(':checked')){
+            } else if ($('#CommunicatingEmail_No').is(':checked')) {
                 $('.CommunicatingEmailDiv').hide();
             }
         });
     });
-    
+
     $(document).ready(function() {
         $('input[name="AustraliaWithAnyFamilyMember"]').on('change', function() {
             if ($('#AustraliaWithAnyFamilyMember_Yes').is(':checked')) {
                 $('.AustraliaWithAnyFamilyMemberDIv').show();
-            }
-            else if($('#AustraliaWithAnyFamilyMember_No').is(':checked')){
+            } else if ($('#AustraliaWithAnyFamilyMember_No').is(':checked')) {
                 $('.AustraliaWithAnyFamilyMemberDIv').hide();
             }
         });
@@ -1226,8 +1219,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="PartnerChildren"]').on('change', function() {
             if ($('#PartnerChildren_Yes').is(':checked')) {
                 $('.PartnerChildrenDiv').show();
-            }
-            else if($('#PartnerChildren_No').is(':checked')){
+            } else if ($('#PartnerChildren_No').is(':checked')) {
                 $('.PartnerChildrenDiv').hide();
             }
         });
@@ -1237,8 +1229,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="TravellingAustraliaOtherCountry"]').on('change', function() {
             if ($('#TravellingAustraliaOtherCountry_Yes').is(':checked')) {
                 $('.TravellingAustraliaOtherCountryDiv').show();
-            }
-            else if($('#TravellingAustraliaOtherCountry_No').is(':checked')){
+            } else if ($('#TravellingAustraliaOtherCountry_No').is(':checked')) {
                 $('.TravellingAustraliaOtherCountryDiv').hide();
             }
         });
@@ -1248,8 +1239,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="RelativesAustralia"]').on('change', function() {
             if ($('#RelativesAustralia_Yes').is(':checked')) {
                 $('.RelativesAustralia').show();
-            }
-            else if($('#RelativesAustralia_No').is(':checked')){
+            } else if ($('#RelativesAustralia_No').is(':checked')) {
                 $('.RelativesAustralia').hide();
             }
         });
@@ -1259,8 +1249,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="ContactsAustralia"]').on('change', function() {
             if ($('#ContactsAustralia_Yes').is(':checked')) {
                 $('.ContactsAustraliaDiv').show();
-            }
-            else if($('#ContactsAustralia_No').is(':checked')){
+            } else if ($('#ContactsAustralia_No').is(':checked')) {
                 $('.ContactsAustraliaDiv').hide();
             }
         });
@@ -1270,8 +1259,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="CourseStudyAustralia"]').on('change', function() {
             if ($('#CourseStudyAustralia_Yes').is(':checked')) {
                 $('.CourseStudyAustraliaDiv').show();
-            }
-            else if($('#CourseStudyAustralia_No').is(':checked')){
+            } else if ($('#CourseStudyAustralia_No').is(':checked')) {
                 $('.CourseStudyAustraliaDiv').hide();
             }
         });
@@ -1282,8 +1270,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="SpentTimeAustralia"]').on('change', function() {
             if ($('#SpentTimeAustralia_Yes').is(':checked')) {
                 $('.SpentTimeAustraliaDiv').show();
-            }
-            else if($('#SpentTimeAustralia_No').is(':checked')){
+            } else if ($('#SpentTimeAustralia_No').is(':checked')) {
                 $('.SpentTimeAustraliaDiv').hide();
             }
         });
@@ -1294,8 +1281,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="HealthCareFacility"]').on('change', function() {
             if ($('#HealthCareFacility_Yes').is(':checked')) {
                 $('.HealthCareFacilityDiv').show();
-            }
-            else if($('#HealthCareFacility_No').is(':checked')){
+            } else if ($('#HealthCareFacility_No').is(':checked')) {
                 $('.HealthCareFacilityDiv').hide();
             }
         });
@@ -1305,8 +1291,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="DoctorDentist"]').on('change', function() {
             if ($('#DoctorDentist_Yes').is(':checked')) {
                 $('.DoctorDentistDiv').show();
-            }
-            else if($('#DoctorDentist_No').is(':checked')){
+            } else if ($('#DoctorDentist_No').is(':checked')) {
                 $('.DoctorDentistDiv').hide();
             }
         });
@@ -1317,8 +1302,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="Tuberculosis"]').on('change', function() {
             if ($('#Tuberculosis_Yes').is(':checked')) {
                 $('.TuberculosisDiv').show();
-            }
-            else if($('#Tuberculosis_No').is(':checked')){
+            } else if ($('#Tuberculosis_No').is(':checked')) {
                 $('.TuberculosisDiv').hide();
             }
         });
@@ -1328,8 +1312,7 @@ foreach ($Contact as $ContactData) {
         $('input[name="IncurMedicalCosts"]').on('change', function() {
             if ($('#IncurMedicalCosts_Yes').is(':checked')) {
                 $('.IncurMedicalCostsDiv').show();
-            }
-            else if($('#IncurMedicalCosts_No').is(':checked')){
+            } else if ($('#IncurMedicalCosts_No').is(':checked')) {
                 $('.IncurMedicalCostsDiv').hide();
             }
         });
@@ -1340,26 +1323,65 @@ foreach ($Contact as $ContactData) {
         $('input[name="MedicalCondition"]').on('change', function() {
             if ($('#MedicalCondition_Yes').is(':checked')) {
                 $('.MedicalConditionDiv').show();
-            }
-            else if($('#MedicalCondition_No').is(':checked')){
+            } else if ($('#MedicalCondition_No').is(':checked')) {
                 $('.MedicalConditionDiv').hide();
             }
         });
     });
 
-    
+
     $(document).ready(function() {
         $('input[name="UndertakenAustralianVisaLast12Month"]').on('change', function() {
             if ($('#UndertakenAustralianVisaLast12Month_Yes').is(':checked')) {
                 $('.UndertakenAustralianVisaLast12MonthDIv').show();
-            }
-            else if($('#UndertakenAustralianVisaLast12Month_No').is(':checked')){
+            } else if ($('#UndertakenAustralianVisaLast12Month_No').is(':checked')) {
                 $('.UndertakenAustralianVisaLast12MonthDIv').hide();
             }
         });
     });
 
 
+    $(document).ready(function() {
+        $('.EmploymentStatus_Unemployed_Div').hide();
+        $('.EmploymentStatus_Other_Div').hide();
+        $('.EmploymentStatus_Student_Div').hide();
+        $('.EmploymentStatus_Retired_Div').hide();
+        $('.EmploymentStatus_Employed_Div').hide();
+
+        $('input[name="EmploymentStatus"]').on('change', function() {
+            if ($('#EmploymentStatus_Employed').is(':checked')) {
+                $('.EmploymentStatus_Employed_Div').show();
+                $('.EmploymentStatus_Other_Div').hide();
+                $('.EmploymentStatus_Student_Div').hide();
+                $('.EmploymentStatus_Retired_Div').hide();
+                $('.EmploymentStatus_Unemployed_Div').hide();
+            } else if ($('#EmploymentStatus_Retired').is(':checked')) {
+                $('.EmploymentStatus_Retired_Div').show();
+                $('.EmploymentStatus_Unemployed_Div').hide();
+                $('.EmploymentStatus_Other_Div').hide();
+                $('.EmploymentStatus_Student_Div').hide();
+                $('.EmploymentStatus_Employed_Div').hide();
+            } else if ($('#EmploymentStatus_Student').is(':checked')) {
+                $('.EmploymentStatus_Student_Div').show();
+                $('.EmploymentStatus_Unemployed_Div').hide();
+                $('.EmploymentStatus_Other_Div').hide();
+                $('.EmploymentStatus_Retired_Div').hide();
+                $('.EmploymentStatus_Employed_Div').hide();
+            } else if ($('#EmploymentStatus_Other').is(':checked')) {
+                $('.EmploymentStatus_Other_Div').show();
+                $('.EmploymentStatus_Unemployed_Div').hide();
+                $('.EmploymentStatus_Student_Div').hide();
+                $('.EmploymentStatus_Retired_Div').hide();
+                $('.EmploymentStatus_Employed_Div').hide();
+            } else if ($('#EmploymentStatus_Unemployed').is(':checked')) {
+                $('.EmploymentStatus_Unemployed_Div').show();
+                $('.EmploymentStatus_Other_Div').hide();
+                $('.EmploymentStatus_Student_Div').hide();
+                $('.EmploymentStatus_Retired_Div').hide();
+                $('.EmploymentStatus_Employed_Div').hide();
+            }
+        });
+    });
 </script>
 
 </body>

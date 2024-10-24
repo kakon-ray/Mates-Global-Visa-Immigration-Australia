@@ -1210,7 +1210,7 @@
                                 <input name="RelativesAustraliaAddress" class="form-control" type="text" required>
                             </div>
                         </div>
-           
+
 
                         <div class="col-sm-4 RelativesAustralia">
                             <div>
@@ -2328,6 +2328,167 @@
                         </div>
                     </div>
 
+
+                    <!------------------- Part-F Place of birth -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part G – Employment status </h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">39. What is your employment status?</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Employed" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Employed">
+                                                Employed/self-employed
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Retired" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Retired">
+                                                Retired
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Student" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Student">
+                                                Student
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Other" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Other">
+                                                Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="EmploymentStatus" id="EmploymentStatus_Unemployed" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="EmploymentStatus_Unemployed">
+                                                Unemployed
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Employed / Self-employed -->
+
+                    <div class="row EmploymentStatus_Employed_Div">
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">Employer/Business Name: </label>
+                                <input name="EmploymentStatus_BusinessName" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">Address: </label>
+                                <input name="EmploymentStatus_Address" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">Postcode: </label>
+                                <input name="EmploymentStatus_Postcode" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">Telephone Number: </label>
+                                <input name="EmploymentStatus_Telephone_Number" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">Position you hold : </label>
+                                <input name="EmploymentStatus_Position" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-2">
+                                <label class="lebel_title">How long have you been employed by this employer/business? : </label>
+                                <input name="EmploymentStatus_Long_Employed" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retired -->
+                    <div class="row EmploymentStatus_Retired_Div">
+                        <div class="col-sm-12">
+                            <div class="mb-2">
+                                <label class="lebel_title">Year of retirement: </label>
+                                <input name="EmploymentStatus_YearRetirement" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student -->
+                    <div class="row EmploymentStatus_Student_Div">
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details Your current course: </label>
+                                <input name="EmploymentStatus_Current_Course" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">Name of educational institution: </label>
+                                <input name="EmploymentStatus_Educational_Institution" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">How long have you been studying at this institution?: </label>
+                                <input name="EmploymentStatus_Studying_Institution" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Give details -->
+                    <div class="row EmploymentStatus_Other_Div">
+                        <div class="col-sm-12">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give Details : </label>
+                                <input name="EmploymentStatus_Other_Details" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unemployed Give details -->
+                    <div class="row EmploymentStatus_Unemployed_Div">
+                        <div class="col-sm-12">
+                            <div class="mb-2">
+                                <label class="lebel_title">Explain why you are unemployed and give details
+                                of your last employment (if applicable) : </label>
+                                <input name="EmploymentStatus_Unemployed" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
 
 
 
