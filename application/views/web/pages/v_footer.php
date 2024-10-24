@@ -1341,6 +1341,7 @@ foreach ($Contact as $ContactData) {
     });
 
 
+    //  question no 39
     $(document).ready(function() {
         $('.EmploymentStatus_Unemployed_Div').hide();
         $('.EmploymentStatus_Other_Div').hide();
@@ -1382,6 +1383,10 @@ foreach ($Contact as $ContactData) {
             }
         });
     });
+
+
+
+
 </script>
 
 </body>

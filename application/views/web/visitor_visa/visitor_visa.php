@@ -2334,6 +2334,7 @@
                         <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part G – Employment status </h1>
                     </div>
 
+                    <!-- question not 39 -->
                     <div class="row">
                         <div class="col-sm-12">
                             <div>
@@ -2484,12 +2485,28 @@
                         <div class="col-sm-12">
                             <div class="mb-2">
                                 <label class="lebel_title">Explain why you are unemployed and give details
-                                of your last employment (if applicable) : </label>
+                                    of your last employment (if applicable) : </label>
                                 <input name="EmploymentStatus_Unemployed" class="form-control" type="text">
                             </div>
                         </div>
                     </div>
 
+
+                    <!------------------- Part-F Place of birth -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part H – Funding for stay </h1>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="mb-2">
+                                <label class="lebel_title">Give details of how you will maintain yourself financially while you are
+                                in Australia: </label>
+                                <input name="Maintain_Yourself_Financially" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="mt-5 text-center">
