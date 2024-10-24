@@ -2663,7 +2663,481 @@
                     </div>
 
 
+                    <!------------------- Part J – Assistance with this form -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part J – Assistance with this form </h1>
+                    </div>
 
+
+                    <div class="row">
+                        <!-- Question No 43 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">43. Did you receive assistance in completing this form?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="AssistanceReceiveCompletingForm" id="AssistanceReceiveCompletingForm_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AssistanceReceiveCompletingForm_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="AssistanceReceiveCompletingForm" id="AssistanceReceiveCompletingForm_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="AssistanceReceiveCompletingForm_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Family name : </label>
+                                <input name="AssistanceReceiveCompletingForm_Family_Name" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Given names : </label>
+                                <input name="AssistanceReceiveCompletingForm_Given_Names" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Address : </label>
+                                <input name="AssistanceReceiveCompletingForm_Address" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">POSTCODE : </label>
+                                <input name="AssistanceReceiveCompletingForm_POSTCODE" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Telephone number or daytime contact Office hours: </label>
+                                <input name="Office_Telephone_Office" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div class="mb-2">
+                                <label class="lebel_title">Telephone number or daytime contact Mobile/cell: </label>
+                                <input name="Office_Telephone_Mobile" class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Question No 44 -->
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">44. Is the person an agent registered with the Office of the Migration
+                                    Agents Registration Authority (Office of the MARA)?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="MigrationAgentsRegistrationAuthority" id="MigrationAgentsRegistrationAuthority_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="MigrationAgentsRegistrationAuthority_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="MigrationAgentsRegistrationAuthority" id="MigrationAgentsRegistrationAuthority_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="MigrationAgentsRegistrationAuthority_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question No 45 -->
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">45. Is the person/agent in Australia?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PersonAgentAustralia" id="PersonAgentAustralia_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PersonAgentAustralia_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PersonAgentAustralia" id="PersonAgentAustralia_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PersonAgentAustralia_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question No 46 -->
+                        <div class="col-sm-6 AssistanceReceiveCompletingFormDiv">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">46. Did you pay the person/agent and/or give a gift for this assistance?
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PayPersonAgent" id="PayPersonAgent_No">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PayPersonAgent_No">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="PayPersonAgent" id="PayPersonAgent_Yes" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="PayPersonAgent_Yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------- Part J – Assistance with this form -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part K – Options for receiving written communications </h1>
+                    </div>
+
+
+                    <div class="row">
+                        <!-- Question no 47 -->
+                        <div class="col-sm-12 AssistanceReceiveCompletingFormDiv">
+                            <div>
+                                <label class="lebel_title" style="line-height: 13px;">47. All written communications about this application should be sent to:
+                                    (Tick one box only)
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ReceivingWrittenCommunications" id="ReceivingWrittenCommunications_Myself">
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ReceivingWrittenCommunications_Myself">
+                                                Myself
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ReceivingWrittenCommunications" id="ReceivingWrittenCommunications_Authorised" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ReceivingWrittenCommunications_Authorised">
+                                                Authorised Recipient
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ReceivingWrittenCommunications" id="ReceivingWrittenCommunications_Migration_Agent" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ReceivingWrittenCommunications_Migration_Agent">
+                                                Migration agent
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="mb-3 p-3 border rounded bg-light">
+                                        <div class="form-check d-flex align-items-center">
+                                            <input class="form-check-input me-3" type="radio" name="ReceivingWrittenCommunications" id="ReceivingWrittenCommunications_Exempt_Person" checked>
+                                            <label class="lebel_title flex-grow-1 fw-semibold" for="ReceivingWrittenCommunications_Exempt_Person">
+                                                Exempt person
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------------- Part L – Payment details -------------------->
+                    <div class="three pt-5">
+                        <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part L – Payment details </h1>
+                    </div>
+                    <!-- Question no 48 -->
+                    <p><b>48. Important:</b> You must refer to the department’s website at www.immi.gov.au/fees-charges to complete this part of your application.
+                        The website shows reference tables with the Visa Application Charges applicable to each visa subclass.</p>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">* Visa subclass you are applying for : </label>
+                                <input name="VisaSubclassApplying" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">* Base Application Charge : </label>
+                                <input name="BaseApplicationCharge" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="mb-2">
+                                <label class="lebel_title">* Non-internet Application Charge (if applicable) : </label>
+                                <input name="NonInternetApplicationCharge" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 pt-2">
+                            <div class="mb-2">
+                                <label class="lebel_title pb-3">* Additional Applicant Charge aged 18 years or over at the time your application is lodged : </label>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Write the amount shown on the reference table for your visa subclass : </label>
+                                        <input name="AdditionalApllicationPayment" class="form-control" type="text">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Number of additional applicants aged 18 years or over : </label>
+                                        <input name="AdditionalApllicationAge" class="form-control" type="number">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Total : </label>
+                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 pt-2">
+                            <div class="mb-2">
+                                <label class="lebel_title pb-3">* Subsequent Temporary Application Charge (if applicable) : </label>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Write the amount shown on the reference table for your visa subclass : </label>
+                                        <input name="AdditionalApllicationPayment" class="form-control" type="text">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Number of applicants : </label>
+                                        <input name="AdditionalApllicationAge" class="form-control" type="number">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="lebel_title">Total : </label>
+                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="mb-2">
+                                <label class="lebel_title">* Total (1) + (2) + (3) + (4) + (5) : </label>
+                                <input name="TotalAmount" class="form-control" type="number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  Question no 49 -->
+
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="lebel_title" style="line-height: 13px;">49. How will you pay your application charge? </label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="PaymentMethod" id="PaymentMethod_BankCheque">
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="PaymentMethod_BankCheque">
+                                            Bank cheque
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="PaymentMethod" id="PaymentMethod_MoneyOrder">
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="PaymentMethod_MoneyOrder">
+                                            Money order
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="PaymentMethod" id="PaymentMethod_DebitCard">
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="PaymentMethod_DebitCard">
+                                            Debit card
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="mb-3 p-3 border rounded bg-light">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" name="PaymentMethod" id="PaymentMethod_CreditCard" checked>
+                                        <label class="lebel_title flex-grow-1 fw-semibold" for="PaymentMethod_CreditCard">
+                                            Credit card
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment by Credit card  (tick one box) -->
+                            <div class="col-sm-12 PaymentMethodDIv">
+                                <div>
+                                    <label class="lebel_title" style="line-height: 13px;">Payment by Credit card (tick one box)
+                                    </label>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="radio" name="CreaditCardType" id="CreaditCardType_MasterCard">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="CreaditCardType_MasterCard">
+                                                    MasterCard
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="radio" name="CreaditCardType" id="CreaditCardType_AmericanExpress">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="CreaditCardType_AmericanExpress">
+                                                    American Express
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="radio" name="CreaditCardType" id="CreaditCardType_Visa">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="CreaditCardType_Visa">
+                                                    Visa
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="radio" name="CreaditCardType" id="CreaditCardType_DinersClub">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="CreaditCardType_DinersClub">
+                                                    Diners Club
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="radio" name="CreaditCardType" id="CreaditCardType_JCB">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="CreaditCardType_JCB">
+                                                    JCB
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Australian Dollars: </label>
+                                    <input name="AustralianDollars" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Credit card number: </label>
+                                    <input name="CreditCardNumber" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Expiry date: </label>
+                                    <div class="d-flex">
+                                        <input name="CreditCardStartDate" class="form-control" type="text" placeholder="Start Date">
+                                        <span style="font-size:60px;margin-top:15px">/</span>
+                                        <input name="CreditCardEndDate" class="form-control" type="text" placeholder="End Date">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Cardholder’s name: </label>
+                                    <input name="CardholdersName" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Telephone number: </label>
+                                    <input name="CreditCardTelephone" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Address: </label>
+                                    <input name="CreditCardTelephone" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Signature of Cardholder: </label>
+                                    <input name="CreditCardSignature" class="form-control" type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="mt-5 text-center">
                         <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Submit</span></button>

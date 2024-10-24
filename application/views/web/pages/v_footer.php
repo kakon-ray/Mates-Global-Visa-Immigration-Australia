@@ -1400,13 +1400,34 @@ foreach ($Contact as $ContactData) {
 
 
     // Question 42
-
     $(document).ready(function() {
         $('input[name="PreviousApplications"]').on('change', function() {
             if ($('#PreviousApplications_Yes').is(':checked')) {
                 $('.PreviousApplicationsDiv').show();
             } else if ($('#PreviousApplications_No').is(':checked')) {
                 $('.PreviousApplicationsDiv').hide();
+            }
+        });
+    });
+    
+    // Question 43
+    $(document).ready(function() {
+        $('input[name="AssistanceReceiveCompletingForm"]').on('change', function() {
+            if ($('#AssistanceReceiveCompletingForm_Yes').is(':checked')) {
+                $('.AssistanceReceiveCompletingFormDiv').show();
+            } else if ($('#AssistanceReceiveCompletingForm_No').is(':checked')) {
+                $('.AssistanceReceiveCompletingFormDiv').hide();
+            }
+        });
+    });
+
+    // Question 49
+    $(document).ready(function() {
+        $('input[name="PaymentMethod"]').on('change', function() {
+            if ($('#PaymentMethod_CreditCard').is(':checked')) {
+                $('.PaymentMethodDIv').show();
+            } else{
+                $('.PaymentMethodDIv').hide();
             }
         });
     });
