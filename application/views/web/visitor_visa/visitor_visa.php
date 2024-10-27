@@ -2936,15 +2936,15 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Write the amount shown on the reference table for your visa subclass : </label>
-                                        <input name="AdditionalApllicationPayment" class="form-control" type="text">
+                                        <input name="AdditionalApllicationPayment" class="form-control" type="number" id="AdditionalApllicationPayment">
                                     </div>
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Number of additional applicants aged 18 years or over : </label>
-                                        <input name="AdditionalApllicationAge" class="form-control" type="number">
+                                        <input name="AdditionalApllicationAge" class="form-control" type="number" id="AdditionalApllicationAge">
                                     </div>
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Total : </label>
-                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="text">
+                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="text" id="AdditionalApplicantChargeOverAged18">
                                     </div>
                                 </div>
                             </div>
@@ -2955,15 +2955,15 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Write the amount shown on the reference table for your visa subclass : </label>
-                                        <input name="AdditionalApllicationPayment" class="form-control" type="text">
+                                        <input name="SubsequentAdditionalApllicationPayment" class="form-control" type="text" id="SubsequentAdditionalApllicationPayment">
                                     </div>
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Number of applicants : </label>
-                                        <input name="AdditionalApllicationAge" class="form-control" type="number">
+                                        <input name="SubsequentAdditionalApllicationAge" class="form-control" type="number" id="SubsequentAdditionalApllicationAge">
                                     </div>
                                     <div class="col-lg-4">
                                         <label class="lebel_title">Total : </label>
-                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="text">
+                                        <input name="AdditionalApplicantChargeOverAged18" class="form-control w-500" type="number" id="SubsequentAdditionalApplicantChargeOverAged18">
                                     </div>
                                 </div>
                             </div>
@@ -2972,7 +2972,7 @@
                         <div class="col-sm-12">
                             <div class="mb-2">
                                 <label class="lebel_title">* Total (1) + (2) + (3) + (4) + (5) : </label>
-                                <input name="TotalAmount" class="form-control" type="number">
+                                <input name="TotalAmount" class="form-control" type="number" id="TotalAmount">
                             </div>
                         </div>
                     </div>
@@ -3136,6 +3136,211 @@
                                     <input name="CreditCardSignature" class="form-control" type="file">
                                 </div>
                             </div>
+
+                            <!-- Part M – Application checklist -->
+                            <div class="three pt-5">
+                                <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part M – Application checklist </h1>
+                            </div>
+
+                            <!-- Start 50 Number Question Ans -->
+                            <div class="col-sm-12">
+                                <div>
+                                    <label class="lebel_title" style="line-height: 13px;">50. With your completed and signed application form 1419, you must include: </label>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" value="A certified copy of the identity page (showing photo
+                                                    and personal details) of a valid passport and other
+                                                    pages which provide evidence of travel to any other
+                                                    countries" name="applicationCheckbox" id="certified_copy">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="certified_copy">
+                                                    A certified copy of the identity page (showing photo
+                                                    and personal details) of a valid passport and other
+                                                    pages which provide evidence of travel to any other
+                                                    countries
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" value="A recent passport photograph (not more than
+                                                6 months old) of yourself" name="applicationCheckbox" id="passport_photograph">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="passport_photograph">
+                                                    A recent passport photograph (not more than
+                                                    6 months old) of yourself
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" value="The Visa Application Charge (if applicable)" name="applicationCheckbox" id="visa_application_charge">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="visa_application_charge">
+                                                    The Visa Application Charge (if applicable)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="A completed form 1257 Undertaking declaration, for
+                                                    applicants under 18 years of age, staying in Australia
+                                                    with someone other than a parent, legal guardian or
+                                                    relative" id="Undertaking_declaration">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="Undertaking_declaration">
+                                                    A completed form 1257 Undertaking declaration, for
+                                                    applicants under 18 years of age, staying in Australia
+                                                    with someone other than a parent, legal guardian or
+                                                    relative
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="A completed form 1229 Consent to grant an
+                                                    Australian visa to a child under the age of 18 years,
+                                                    for applicants under 18 years of age, travelling alone
+                                                    or without one or both of their parents or legal
+                                                    guardians (if applicable)" id="child_visa_under18">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="child_visa_under18">
+                                                    A completed form 1229 Consent to grant an
+                                                    Australian visa to a child under the age of 18 years,
+                                                    for applicants under 18 years of age, travelling alone
+                                                    or without one or both of their parents or legal
+                                                    guardians (if applicable)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="If you authorise another person to receive all written
+                                                    communications about your application with the
+                                                    department." id="uthorise_another_person">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="uthorise_another_person">
+                                                    If you authorise another person to receive all written
+                                                    communications about your application with the
+                                                    department.
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="Evidence of access to funds to support your stay" id="Evidenceaccess">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="Evidenceaccess">
+                                                    Evidence of access to funds to support your stay
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="Evidence of your medical/travel insurance
+                                                (if requested)" id="medical_travel_insurance">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="medical_travel_insurance">
+                                                    Evidence of your medical/travel insurance
+                                                    (if requested)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="A letter from your employer confirming your leave" id="employer_confirming">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="employer_confirming">
+                                                    A letter from your employer confirming your leave
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="Evidence of enrolment at school, college or university" id="college_university">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="college_university">
+                                                    Evidence of enrolment at school, college or university
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="If visiting a close family member in Australia (who is a
+                                                        citizen or permanent resident of Australia)" id="family_member_Australia">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="family_member_Australia">
+                                                    If visiting a close family member in Australia (who is a
+                                                    citizen or permanent resident of Australia)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3 p-3 border rounded bg-light">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-3" type="checkbox" name="applicationCheckbox" value="other information to show that you have an incentive
+                                                and authority to return to your country of residence,
+                                                such as property or other significant assets in your
+                                                home country" id="residence_significant">
+                                                <label class="lebel_title flex-grow-1 fw-semibold" for="residence_significant">
+                                                    other information to show that you have an incentive
+                                                    and authority to return to your country of residence,
+                                                    such as property or other significant assets in your
+                                                    home country
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                            <!-- Part N – Signatures -->
+                            <div class="three pt-5">
+                                <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part M – Application checklist </h1>
+                            </div>
+                            <p>BIOMETRICS DECLARATION AND CONSENT</p>
+                            <div class="col-sm-6 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Signature of applicant: </label>
+                                    <input name="Signatureofapplicant" class="form-control" type="file">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Date: </label>
+                                    <input name="Signatureofapplicant_Date" class="form-control" type="date">
+                                </div>
+                            </div>
+
+                            <div class="three pt-5">
+                                <h1><img src="<?php echo base_url(); ?>others/images/information.png" width="25" height="25" alt="General Details">&nbsp; Part O – Additional information </h1>
+                            </div>
+
+                            <div class="col-sm-12 PaymentMethodDIv">
+                                <div class="mb-2">
+                                    <label class="lebel_title">Additional information: </label>
+                                    <textarea name="Additionalinformation" class="form-control" type="date"></textarea>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 

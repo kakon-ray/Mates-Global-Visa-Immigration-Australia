@@ -1409,7 +1409,7 @@ foreach ($Contact as $ContactData) {
             }
         });
     });
-    
+
     // Question 43
     $(document).ready(function() {
         $('input[name="AssistanceReceiveCompletingForm"]').on('change', function() {
@@ -1426,13 +1426,89 @@ foreach ($Contact as $ContactData) {
         $('input[name="PaymentMethod"]').on('change', function() {
             if ($('#PaymentMethod_CreditCard').is(':checked')) {
                 $('.PaymentMethodDIv').show();
-            } else{
+            } else {
                 $('.PaymentMethodDIv').hide();
             }
         });
     });
-
 </script>
+
+
+<script>
+    // Function to calculate total
+    function calculateTotal() {
+        const amountInput = document.getElementById("AdditionalApllicationPayment");
+        const additionalApplicantsInput = document.getElementById("AdditionalApllicationAge");
+        const totalInput = document.getElementById("AdditionalApplicantChargeOverAged18");
+
+        // Convert input values to numbers (default to 0 if input is empty)
+        const amount = parseFloat(amountInput.value) || 0;
+        const additionalApplicants = parseInt(additionalApplicantsInput.value) || 0;
+
+        // Calculate total
+        const total = amount * additionalApplicants;
+
+        // Display the total in the Total input field
+        totalInput.value = total;
+
+
+        // ========== Final Toltal ======================
+        const amountInput1 = document.getElementById("SubsequentAdditionalApllicationPayment");
+        const quantity2 = document.getElementById("SubsequentAdditionalApllicationAge");
+
+        const amountConvert = parseFloat(amountInput1.value) || 0;
+        const additionalApplicantsCpnvert = parseInt(quantity2.value) || 0;
+
+        const totalInputAmout = document.getElementById("TotalAmount");
+
+        const total2 = amountConvert * additionalApplicantsCpnvert;
+        totalInputAmout.value = total + total2;
+    }
+
+    // Event listeners to call calculateTotal when inputs change
+    document.getElementById("AdditionalApllicationPayment").addEventListener("input", calculateTotal);
+    document.getElementById("AdditionalApllicationAge").addEventListener("input", calculateTotal);
+</script>
+
+
+
+<script>
+    // Function to calculate total
+    function calculateTotal() {
+        const amountInput = document.getElementById("SubsequentAdditionalApllicationPayment");
+        const additionalApplicantsInput = document.getElementById("SubsequentAdditionalApllicationAge");
+        const totalInput = document.getElementById("SubsequentAdditionalApplicantChargeOverAged18");
+
+        // Convert input values to numbers (default to 0 if input is empty)
+        const amount = parseFloat(amountInput.value) || 0;
+        const additionalApplicants = parseInt(additionalApplicantsInput.value) || 0;
+
+        // Calculate total
+        const total = amount * additionalApplicants;
+
+        // Display the total in the Total input field
+        totalInput.value = total;
+
+
+
+        // ========== Final Toltal ======================
+        const amountInput1 = document.getElementById("AdditionalApllicationPayment");
+        const quantity2 = document.getElementById("AdditionalApllicationAge");
+
+        const amountConvert = parseFloat(amountInput1.value) || 0;
+        const additionalApplicantsCpnvert = parseInt(quantity2.value) || 0;
+
+        const totalInputAmout = document.getElementById("TotalAmount");
+
+        const total2 = amountConvert * additionalApplicantsCpnvert;
+        totalInputAmout.value = total + total2;
+    }
+
+    // Event listeners to call calculateTotal when inputs change
+    document.getElementById("SubsequentAdditionalApllicationPayment").addEventListener("input", calculateTotal);
+    document.getElementById("SubsequentAdditionalApllicationAge").addEventListener("input", calculateTotal);
+</script>
+
 
 </body>
 
