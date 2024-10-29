@@ -14,6 +14,7 @@ class Web_operation extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('upload');
 
         $this->load->helper('html');
         $this->load->helper('form');
@@ -26,7 +27,7 @@ class Web_operation extends CI_Controller
         $this->load->library('session');
         $this->load->library('pagination');
     }
-    
+
     public function index()
     {
         if ($this->session->userdata('logged_in')) {
@@ -116,6 +117,8 @@ class Web_operation extends CI_Controller
         redirect(base_url() . 'web/success');
     }
 
+
+    // Student Visa Application Form Submit
     public function student_assessment_new_submit()
     {
         header('Content-Type: text/html; charset=utf-8');
@@ -358,6 +361,249 @@ class Web_operation extends CI_Controller
         redirect(base_url() . 'web/success');
     }
 
+    // Visitor Visa Application Form Subclass 400
+
+    public function visitor_visa_submit()
+    {
+        header('Content-Type: text/html; charset=utf-8');
+        date_default_timezone_set('Asia/Dhaka');
+        $date = date('Y-m-d', strtotime('-0 day'));
+        $time = date('H:i:s', strtotime('-0 day'));
+        $this->load->Model('Web_model');
+
+
+        // Capture the dates from the request
+        $start_date = isset($_REQUEST['VisitAustraliaStartDate']) ? $_REQUEST['VisitAustraliaStartDate'] : '';
+        $end_date = isset($_REQUEST['VisitAustraliaEndDate']) ? $_REQUEST['VisitAustraliaEndDate'] : '';
+
+        // Concatenate the start date and end date (if that's what you're trying to achieve)
+        $combined_dates = $start_date . ' to ' . $end_date;
+
+
+        // Country 1
+        $SpentTimeAustraliaCountry_1_Date_start = isset($_REQUEST['SpentTimeAustraliaCountry_1_Date_start']) ? $_REQUEST['SpentTimeAustraliaCountry_1_Date_start'] : '';
+        $SpentTimeAustraliaCountry_1_Date_end = isset($_REQUEST['SpentTimeAustraliaCountry_1_Date_end']) ? $_REQUEST['SpentTimeAustraliaCountry_1_Date_end'] : '';
+        $Country_1 = $SpentTimeAustraliaCountry_1_Date_start . ' to ' . $SpentTimeAustraliaCountry_1_Date_end;
+
+        // Country 2
+        $SpentTimeAustraliaCountry_2_Date_start = isset($_REQUEST['SpentTimeAustraliaCountry_2_Date_start']) ? $_REQUEST['SpentTimeAustraliaCountry_2_Date_start'] : '';
+        $SpentTimeAustraliaCountry_2_Date_start = isset($_REQUEST['SpentTimeAustraliaCountry_2_Date_end']) ? $_REQUEST['SpentTimeAustraliaCountry_2_Date_end'] : '';
+        $Country_2 = $SpentTimeAustraliaCountry_2_Date_start . ' to ' . $SpentTimeAustraliaCountry_2_Date_start;
+
+        // Country 2
+        $SpentTimeAustraliaCountry_3_Date_start = isset($_REQUEST['SpentTimeAustraliaCountry_3_Date_start']) ? $_REQUEST['SpentTimeAustraliaCountry_3_Date_start'] : '';
+        $SpentTimeAustraliaCountry_3_Date_end = isset($_REQUEST['SpentTimeAustraliaCountry_3_Date_end']) ? $_REQUEST['SpentTimeAustraliaCountry_3_Date_end'] : '';
+        $Country_3_time = $SpentTimeAustraliaCountry_3_Date_start . ' to ' . $SpentTimeAustraliaCountry_3_Date_end;
+
+
+
+        $config['upload_path'] = './others/upload/signatures/';  // Adjusted to your folder structure
+        $config['allowed_types'] = 'jpg|jpeg|png|pdf';  // Allowed file types
+        $config['max_size'] = 2048;  // Maximum file size in KB
+        $config['encrypt_name'] = true;  // Encrypt the file name for security
+
+        // Initialize the upload library with the defined configuration
+        $this->upload->initialize($config);
+
+        // Attempt file upload
+        if (!$this->upload->do_upload('CreditCardSignature')) {
+            // Display any errors if the upload fails
+            $error = $this->upload->display_errors();
+        } else {
+            // On success, retrieve file data and display the file URL
+            $uploadedData = $this->upload->data();
+            $fileUrl = base_url('others/upload/signatures/' . $uploadedData['file_name']);
+
+        }
+
+
+        $VisitorFormData = array(
+            'applying_outside_australialocation' => $_REQUEST['applying_outside_australialocation'],
+            'visitAustraliaTime' => $combined_dates,
+            'how_long_stay_australia' => $_REQUEST['how_long_stay_australia'],
+            'occasion' => $_REQUEST['occasion'],
+            'occasionDetails' => $_REQUEST['occasionDetails'],
+            'Applicants_in_Australia' => $_REQUEST['Applicants_in_Australia'],
+            'furtherStay' => $_REQUEST['furtherStay'],
+            'passport_FamilyName' => $_REQUEST['passport_FamilyName'],
+            'Passport_Sex' => $_REQUEST['Passport_Sex'],
+            'Passport_dateOfBirth' => $_REQUEST['Passport_dateOfBirth'],
+            'PassportNumber' => $_REQUEST['PassportNumber'],
+            'Countryofpassport' => $_REQUEST['Countryofpassport'],
+            'NationalityofpassportHolder' => $_REQUEST['NationalityofpassportHolder'],
+            'Passport_DateofIssue' => $_REQUEST['Passport_DateofIssue'],
+            'Passport_DateofExpiry' => $_REQUEST['Passport_DateofExpiry'],
+            'Passport_PlaceofIssue' => $_REQUEST['Passport_PlaceofIssue'],
+            'Passport_Issuing_Authority' => $_REQUEST['Passport_Issuing_Authority'],
+            'place_birth_Town_city' => $_REQUEST['place_birth_Town_city'],
+            'place_birth_State' => $_REQUEST['place_birth_State'],
+            'place_birth_country' => $_REQUEST['place_birth_country'],
+            'RelationshipStatus' => $_REQUEST['RelationshipStatus'],
+            'KnownAnyOtherName' => $_REQUEST['KnownAnyOtherName'],
+            'currentlyHoldAustralian' => $_REQUEST['currentlyHoldAustralian'],
+            'appliedSubclass103' => $_REQUEST['appliedSubclass103'],
+            'QueueDate' => $_REQUEST['QueueDate'],
+            'APECBusinessTravel' => $_REQUEST['APECBusinessTravel'],
+            'CitizenOtherCountry' => $_REQUEST['CitizenOtherCountry'],
+            'CitizenOtherListCountries' => $_REQUEST['CitizenOtherListCountries'],
+            'OtherCurrentPassports' => $_REQUEST['OtherCurrentPassports'],
+            'OtherCurrentPassportNumber' => $_REQUEST['OtherCurrentPassportNumber'],
+            'OtherCurrentPassportCountry' => $_REQUEST['OtherCurrentPassportCountry'],
+            'HoldIdentityCard' => $_REQUEST['HoldIdentityCard'],
+            'HoldIdentityCardFamilyName' => $_REQUEST['HoldIdentityCardFamilyName'],
+            'HoldIdentityCardGivenNames' => $_REQUEST['HoldIdentityCardGivenNames'],
+            'HoldIdentityCardTypeDocument' => $_REQUEST['HoldIdentityCardTypeDocument'],
+            'HoldIdentityCardIdentityNumber' => $_REQUEST['HoldIdentityCardIdentityNumber'],
+            'HoldIdentityCardCountryIssue' => $_REQUEST['HoldIdentityCardCountryIssue'],
+            'HoldIdentityCardCurrentlyLocated' => $_REQUEST['HoldIdentityCardCurrentlyLocated'],
+            'LegalStatusCurrentLocation' => $_REQUEST['LegalStatusCurrentLocation'],
+            'LegalStatusPermanentResident' => $_REQUEST['LegalStatusPermanentResident'],
+            'LegalStatusVisitor' => $_REQUEST['LegalStatusVisitor'],
+            'LegalStatusStudent' => $_REQUEST['LegalStatusStudent'],
+            'LegalStatusWorkVisa' => $_REQUEST['LegalStatusWorkVisa'],
+            'LegalStatusNoLegalStatus' => $_REQUEST['LegalStatusNoLegalStatus'],
+            'LegalStatusOther' => $_REQUEST['LegalStatusOther'],
+            'LegalStatusGiveDetails' => $_REQUEST['LegalStatusGiveDetails'],
+            'VisaStatus' => $_REQUEST['VisaStatus'],
+            'ResidentialAddress' => $_REQUEST['ResidentialAddress'],
+            'ResidentialPostCode' => $_REQUEST['ResidentialPostCode'],
+            'ResidentialCounty' => $_REQUEST['ResidentialCounty'],
+            'AddressCorrespondence' => $_REQUEST['AddressCorrespondence'],
+            'CorrespondencePostalCode' => $_REQUEST['CorrespondencePostalCode'],
+            'CorrespondenceCountry' => $_REQUEST['CorrespondenceCountry'],
+            'TelephoneNumberHome' => $_REQUEST['TelephoneNumberHome'],
+            'TelephoneNumberOffice' => $_REQUEST['TelephoneNumberOffice'],
+            'MobileCall' => $_REQUEST['MobileCall'],
+            'CommunicatingEmail' => $_REQUEST['CommunicatingEmail'],
+            'CommunicatingEmailEmailAddress' => $_REQUEST['CommunicatingEmailEmailAddress'],
+            'CommunicatingEmailFaxNumber' => $_REQUEST['CommunicatingEmailFaxNumber'],
+            'AustraliaWithAnyFamilyMember' => $_REQUEST['AustraliaWithAnyFamilyMember'],
+            'AustraliaWithAnyFamilyMemberFullName' => $_REQUEST['AustraliaWithAnyFamilyMemberFullName'],
+            'AustraliaWithAnyFamilyMemberRelationshipYou' => $_REQUEST['AustraliaWithAnyFamilyMemberRelationshipYou'],
+            'AustraliaWithAnyFamilyMemberNameofSponsor' => $_REQUEST['AustraliaWithAnyFamilyMemberNameofSponsorbg'],
+            'PartnerChildren' => $_REQUEST['PartnerChildren'],
+            'PartnerChildrenFullName' => $_REQUEST['PartnerChildrenFullName'],
+            'PartnerChildrenRelationshipDateofBirth' => $_REQUEST['PartnerChildrenRelationshipDateofBirth'],
+            'PartnerChildrenRelationshipYou' => $_REQUEST['PartnerChildrenRelationshipYou'],
+            'AddressWhileAustralia' => $_REQUEST['AddressWhileAustralia'],
+            'TravellingAustraliaOtherCountry' => $_REQUEST['TravellingAustraliaOtherCountry'],
+            'ItineraryDetails' => $_REQUEST['ItineraryDetails'],
+            'RelativesAustralia' => $_REQUEST['RelativesAustralia'],
+            'RelativesAustraliaFullName' => $_REQUEST['RelativesAustraliaFullName'],
+            'RelativesAustraliaDateBirth' => $_REQUEST['RelativesAustraliaDateBirth'],
+            'RelativesAustraliaRelationship' => $_REQUEST['RelativesAustraliaRelationship'],
+            'RelativesAustraliaAddress' => $_REQUEST['RelativesAustraliaAddress'],
+            'PermanentCitizen' => $_REQUEST['PermanentCitizen'],
+            'ContactsAustralia' => $_REQUEST['ContactsAustralia'],
+            'ContactsAustraliaFullName' => $_REQUEST['ContactsAustraliaFullName'],
+            'ContactsAustraliaDateBirth' => $_REQUEST['ContactsAustraliaDateBirth'],
+            'ContactsAustraliaRelationship' => $_REQUEST['ContactsAustraliaRelationship'],
+            'ContactsAustraliaAddress' => $_REQUEST['ContactsAustraliaAddress'],
+            'ContactsAustraliaCitizen' => $_REQUEST['ContactsAustraliaCitizen'],
+            'VisitAustralia' => $_REQUEST['VisitAustralia'],
+            'CourseStudyAustralia' => $_REQUEST['CourseStudyAustralia'],
+            'NameOfTheCourse' => $_REQUEST['NameOfTheCourse'],
+            'NameOfTheInstitution' => $_REQUEST['NameOfTheInstitution'],
+            'CourseDuration' => $_REQUEST['CourseDuration'],
+            'SpentTimeAustralia' => $_REQUEST['SpentTimeAustralia'],
+            'SpentTimeAustraliaCountry_1' => $_REQUEST['SpentTimeAustralia'],
+            'Country_1_time' => $Country_1,
+            'SpentTimeAustraliaCountry_2' => $_REQUEST['SpentTimeAustraliaCountry_2'],
+            'Country_2_time' => $Country_2,
+            'SpentTimeAustraliaCountry_3' => $_REQUEST['SpentTimeAustraliaCountry_3'],
+            'Country_3_time' => $Country_3_time,
+            'HealthCareFacility' => $_REQUEST['HealthCareFacility'],
+            'HealthCareFacilityDetails' => $_REQUEST['HealthCareFacilityDetails'],
+            'DoctorDentist' => $_REQUEST['DoctorDentist'],
+            'DoctorDentistDetails' => $_REQUEST['DoctorDentistDetails'],
+            'Tuberculosis' => $_REQUEST['Tuberculosis'],
+            'TuberculosisDetails' => $_REQUEST['TuberculosisDetails'],
+            'IncurMedicalCosts' => $_REQUEST['IncurMedicalCosts'],
+            'IncurMedicalCostsDetails' => $_REQUEST['IncurMedicalCostsDetails'],
+            'MedicalCondition' => $_REQUEST['MedicalCondition'],
+            'MedicalConditionDetails' => $_REQUEST['MedicalConditionDetails'],
+            'UndertakenAustralianVisaLast12Month' => $_REQUEST['UndertakenAustralianVisaLast12Month'],
+            'UndertakenAustralianVisaLast12MonthDetails' => $_REQUEST['UndertakenAustralianVisaLast12MonthDetails'],
+            'CharacterDetails1' => $_REQUEST['CharacterDetails1'],
+            'CharacterDetails2' => $_REQUEST['CharacterDetails2'],
+            'CharacterDetails3' => $_REQUEST['CharacterDetails3'],
+            'CharacterDetails4' => $_REQUEST['CharacterDetails4'],
+            'CharacterDetails5' => $_REQUEST['CharacterDetails5'],
+            'CharacterDetails6' => $_REQUEST['CharacterDetails6'],
+            'CharacterDetails7' => $_REQUEST['CharacterDetails7'],
+            'CharacterDetails8' => $_REQUEST['CharacterDetails8'],
+            'CharacterDetails9' => $_REQUEST['CharacterDetails9'],
+            'CharacterDetails10' => $_REQUEST['CharacterDetails10'],
+            'CharacterDetails11' => $_REQUEST['CharacterDetails11'],
+            'CharacterDetails12' => $_REQUEST['CharacterDetails12'],
+            'CharacterDetails13' => $_REQUEST['CharacterDetails13'],
+            'CharacterDetails14' => $_REQUEST['CharacterDetails14'],
+            'CharacterDetails15' => $_REQUEST['CharacterDetails15'],
+            'CharacterDetails16' => $_REQUEST['CharacterDetails16'],
+            'CharacterDetails17' => $_REQUEST['CharacterDetails17'],
+            'EmploymentStatus' => $_REQUEST['EmploymentStatus'],
+            'EmploymentStatus_BusinessName' => $_REQUEST['EmploymentStatus_BusinessName'],
+            'EmploymentStatus_Address' => $_REQUEST['EmploymentStatus_Address'],
+            'EmploymentStatus_Postcode' => $_REQUEST['EmploymentStatus_Postcode'],
+            'EmploymentStatus_Telephone_Number' => $_REQUEST['EmploymentStatus_Telephone_Number'],
+            'EmploymentStatus_Position' => $_REQUEST['EmploymentStatus_Position'],
+            'EmploymentStatus_Long_Employed' => $_REQUEST['EmploymentStatus_Long_Employed'],
+            'EmploymentStatus_YearRetirement' => $_REQUEST['EmploymentStatus_YearRetirement'],
+            'EmploymentStatus_Current_Course' => $_REQUEST['EmploymentStatus_Current_Course'],
+            'EmploymentStatus_Educational_Institution' => $_REQUEST['EmploymentStatus_Educational_Institution'],
+            'EmploymentStatus_Studying_Institution' => $_REQUEST['EmploymentStatus_Studying_Institution'],
+            'EmploymentStatus_Other_Details' => $_REQUEST['EmploymentStatus_Other_Details'],
+            'EmploymentStatus_Unemployed' => $_REQUEST['EmploymentStatus_Unemployed'],
+            'Maintain_Yourself_Financially' => $_REQUEST['Maintain_Yourself_Financially'],
+            'ProvidingSupportVisitAustralia' => $_REQUEST['ProvidingSupportVisitAustralia'],
+            'ProvidingSupportVisitAustralia_Full_Name' => $_REQUEST['ProvidingSupportVisitAustralia_Full_Name'],
+            'ProvidingSupportVisitAustralia_DateofBirth' => $_REQUEST['ProvidingSupportVisitAustralia_DateofBirth'],
+            'ProvidingSupportVisitAustralia_Relationship_you' => $_REQUEST['ProvidingSupportVisitAustralia_Relationship_you'],
+            'ProvidingSupportVisitAustralia_Address_While_Australia' => $_REQUEST['ProvidingSupportVisitAustralia_Address_While_Australia'],
+            'TypeSupportProvided' => $_REQUEST['TypeSupportProvided'],
+            'PreviousApplications' => $_REQUEST['PreviousApplications'],
+            'PreviousApplicationsDetails' => $_REQUEST['PreviousApplicationsDetails'],
+            'AssistanceReceiveCompletingForm' => $_REQUEST['AssistanceReceiveCompletingForm'],
+            'AssistanceReceiveCompletingForm_Family_Name' => $_REQUEST['AssistanceReceiveCompletingForm_Family_Name'],
+            'AssistanceReceiveCompletingForm_Given_Names' => $_REQUEST['AssistanceReceiveCompletingForm_Given_Names'],
+            'AssistanceReceiveCompletingForm_Address' => $_REQUEST['AssistanceReceiveCompletingForm_Address'],
+            'AssistanceReceiveCompletingForm_POSTCODE' => $_REQUEST['AssistanceReceiveCompletingForm_POSTCODE'],
+            'Office_Telephone_Office' => $_REQUEST['Office_Telephone_Office'],
+            'Office_Telephone_Mobile' => $_REQUEST['Office_Telephone_Mobile'],
+            'MigrationAgentsRegistrationAuthority' => $_REQUEST['MigrationAgentsRegistrationAuthority'],
+            'PersonAgentAustralia' => $_REQUEST['PersonAgentAustralia'],
+            'PayPersonAgent' => $_REQUEST['PayPersonAgent'],
+            'ReceivingWrittenCommunications' => $_REQUEST['ReceivingWrittenCommunications'],
+            'VisaSubclassApplying' => $_REQUEST['VisaSubclassApplying'],
+            'BaseApplicationCharge' => $_REQUEST['BaseApplicationCharge'],
+            'NonInternetApplicationCharge' => $_REQUEST['NonInternetApplicationCharge'],
+            'AdditionalApllicationPayment' => $_REQUEST['AdditionalApllicationPayment'],
+            'AdditionalApllicationAge' => $_REQUEST['AdditionalApllicationAge'],
+            'AdditionalApplicantChargeOverAged18' => $_REQUEST['AdditionalApplicantChargeOverAged18'],
+            'SubsequentAdditionalApllicationPayment' => $_REQUEST['SubsequentAdditionalApllicationPayment'],
+            'SubsequentAdditionalApllicationAge' => $_REQUEST['SubsequentAdditionalApllicationAge'],
+            'SubsequentAdditionalTotal' => $_REQUEST['SubsequentAdditionalTotal'],
+            'TotalAmount' => $_REQUEST['TotalAmount'],
+            'PaymentMethod' => $_REQUEST['PaymentMethod'],
+            'CreaditCardType' => $_REQUEST['CreaditCardType'],
+            'AustralianDollars' => $_REQUEST['AustralianDollars'],
+            'CreditCardNumber' => $_REQUEST['CreditCardNumber'],
+            'CreditCardEndDate' => $_REQUEST['CreditCardEndDate'],
+            'CardholdersName' => $_REQUEST['CardholdersName'],
+            'CreditCardTelephone' => $_REQUEST['CreditCardTelephone'],
+            'CreditCardAddress' => $_REQUEST['CreditCardAddress'],
+            'CreditCardSignature' => $fileUrl,
+            'applicationCheckbox' => json_encode($_REQUEST['applicationCheckbox']),
+            'Signatureofapplicant' => $fileUrl,
+            'Signatureofapplicant_Date' => $_REQUEST['Signatureofapplicant_Date'],
+            'Additionalinformation' => $_REQUEST['Additionalinformation'],
+        );
+        
+        $this->Web_model->visitor_visa_submit($VisitorFormData);
+
+
+        redirect(base_url() . 'web/success2');
+    }
 
     public function attachment_request()
     {

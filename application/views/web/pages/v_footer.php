@@ -1112,7 +1112,7 @@ foreach ($Contact as $ContactData) {
 <script>
     $(document).ready(function() {
         $('.insideAustraliaDiv').hide();
-        $('input[name="location"]').on('change', function() {
+        $('input[name="applying_outside_australialocation"]').on('change', function() {
             // If 'Outside Australia' is selected, show the div
             if ($('#outsideAustralia').is(':checked')) {
                 $('.outsideAustraliaDiv').show();
@@ -1127,6 +1127,7 @@ foreach ($Contact as $ContactData) {
     });
 
 
+    // Question 4
     $(document).ready(function() {
         $('.occasionDIv').hide();
         $('input[name="occasion"]').on('change', function() {

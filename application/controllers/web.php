@@ -528,6 +528,10 @@ class Web extends CI_Controller
     {
         $this->load->view('web/v_success');
     }
+    public function success2()
+    {
+        $this->load->view('web/v_success2');
+    }
     public function form_category()
     {
         $form_category=$_REQUEST['q'];

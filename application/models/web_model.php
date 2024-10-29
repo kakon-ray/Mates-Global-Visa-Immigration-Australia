@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: hp
@@ -8,7 +9,7 @@
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-Class Web_model extends CI_Model
+class Web_model extends CI_Model
 {
     public function home_slider()
     {
@@ -220,28 +221,36 @@ Class Web_model extends CI_Model
     /******student_assessment********************/
     public function new_student_assessment($StudentAssessmentFormData)
     {
-        $this->db->insert('student_assessment_request',$StudentAssessmentFormData);
+        $this->db->insert('student_assessment_request', $StudentAssessmentFormData);
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
     /******student_assessment new********************/
     public function new_student_assessment_submit($StudentAssessmentFormData)
     {
-        $this->db->insert('study_visa_application_form_main',$StudentAssessmentFormData);
+        $this->db->insert('study_visa_application_form_main', $StudentAssessmentFormData);
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
     /******student_assessment submit child********************/
     public function new_student_assessment_submit_child($StudentAssessmentChildFormData)
     {
-        $this->db->insert('study_visa_application_form_child',$StudentAssessmentChildFormData);
+        $this->db->insert('study_visa_application_form_child', $StudentAssessmentChildFormData);
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
-    
+
+    /****** Visitor Visa Application Submit ********************/
+    public function visitor_visa_submit($VisitorFormData)
+    {
+        $this->db->insert('visitor_visa_application_form', $VisitorFormData);
+        $id = $this->db->insert_id();
+        return (isset($id)) ? $id : FALSE;
+    }
+
     public function new_user_create($UserLoginData)
     {
-        $this->db->insert('user_basic',$UserLoginData);
+        $this->db->insert('user_basic', $UserLoginData);
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
@@ -258,11 +267,11 @@ Class Web_model extends CI_Model
     /*******************Hit Log******************/
     public function new_hit_log($DbModelHitData)
     {
-        $this->db->insert('hits_info',$DbModelHitData);
+        $this->db->insert('hits_info', $DbModelHitData);
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
-    public function hit_check($ip,$date)
+    public function hit_check($ip, $date)
     {
         $this->db->select('*');
         $this->db->where('user_ip', $ip);
@@ -270,13 +279,13 @@ Class Web_model extends CI_Model
         $query = $this->db->get('hits_info');
         return $query->row_array();
     }
-    public function hit_data($ip,$date)
+    public function hit_data($ip, $date)
     {
-        $sql="SELECT * FROM hits_info WHERE user_ip='$ip' AND d_date='$date'";
-        $query =$this->db->query($sql);
+        $sql = "SELECT * FROM hits_info WHERE user_ip='$ip' AND d_date='$date'";
+        $query = $this->db->query($sql);
         return $query->result_array();
     }
-    public function hit_log_update($NewHit,$ip,$date,$time)
+    public function hit_log_update($NewHit, $ip, $date, $time)
     {
         $this->db->where('user_ip', $ip);
         $this->db->where('d_date', $date);
@@ -285,5 +294,4 @@ Class Web_model extends CI_Model
         $this->db->update('hits_info');
     }
     /*******************Hit Log******************/
-
 }
