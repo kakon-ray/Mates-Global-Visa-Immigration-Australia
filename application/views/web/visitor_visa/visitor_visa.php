@@ -359,12 +359,14 @@
                                 <input name="Countryofpassport" class="form-control" type="text" >
                             </div>
                         </div>
+                        
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Nationality of passport holder :</label>
                                 <input name="NationalityofpassportHolder " class="form-control" type="text" >
                             </div>
                         </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Date of issue :</label>
@@ -385,6 +387,7 @@
                                 <input name="Passport_PlaceofIssue" class="form-control" type="text" >
                             </div>
                         </div>
+
                         <div class="col-sm-6 mt-2">
                             <div class="mb-2">
                                 <label class="lebel_title">Issuing Authority :</label>
